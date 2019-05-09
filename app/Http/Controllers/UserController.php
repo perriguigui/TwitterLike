@@ -16,6 +16,19 @@ class UserController extends Controller
     ];
 
     public function update(Request $request){
+
+        $attributes = request()->name;
+        if($attributes!=null){
+            $user = Auth::user();
+            $user->name=$attributes;
+            $user->save();
+        }
+        $attributes = request()->description;
+        if($attributes!=null){
+            $user = Auth::user();
+            $user->description=$attributes;
+            $user->save();
+        }
         // Logic for user upload of avatar
         if($request->hasFile('avatar')){
             $avatar = $request->file('avatar');

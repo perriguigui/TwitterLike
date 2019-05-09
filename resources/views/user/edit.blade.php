@@ -16,19 +16,12 @@
                             <input type="text" class="input" name="name" required placeholder="Message" value="{{$user->name}}">
                         </div>
                     </div>
-                    
-                    <div class="field">
-                        <div class="control">
-                            <button type ="submit" class="button is-link">Update profile</button>
-                        </div>
-                    </div>
-
 
 
                     <img src="/uploads/avatars/{{ $user->avatar }}" style="width:150px; height:150px; float:left; border-radius:50%; margin-right:25px;">
                     <label>Update Profile Image</label>
                     <input type="file" name="avatar">
-                    <input type="submit" class="pull-right button is-link">
+                    <button type ="submit" class="button is-link">Update profile</button>
                 </form>
             </div>
         </div>
