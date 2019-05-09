@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Session;
 class PostController extends Controller
 {
     public function index(){
-        $posts =Post::orderBy('created_at','desc')->get();
-        return view('post.post',['posts'=>$posts]);
+        $posts = Post::orderBy('created_at','desc')->get();
+        return view('home',['posts'=>$posts]);
     }
 
     public function likePost(Request $request){

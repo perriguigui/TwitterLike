@@ -5,21 +5,18 @@
             <div class="col-md-10 col-md-offset-1">
                 <img src="/uploads/avatars/{{ $user->avatar }}" style="width:150px; height:150px; float:left; border-radius:50%; margin-right:25px;">
                 <h2>{{ $user->name }}'s Profile</h2>
-                <form enctype="multipart/form-data" action="{{ route('profile.update') }}" method="POST">
-                    <label>Update Profile Image</label>
-                    <input type="file" name="avatar">
-                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                    <input type="submit" class="pull-right btn btn-sm btn-primary">
-                </form>
             </div>
+        </div>
+        <div class="edit">
+            <a href="{{route("profile.edit",$user->id)}}">Editer</a>
         </div>
         <div class="blog-post">
             <a href="{{ route('user.follow', $user->id )}}">Follow User</a>
             <a href="{{ route('user.unfollow', $user->id )}}">Unollow User</a>
                 @foreach ($user->posts as $post)
                     <div class="post" data-postid="{{$post->id}}">
-                        <a href="#"><h3>{{$post->created_at}}</h3></a>
-                        <h6>Posted by {{$post->user->name}}</h6>
+                        <h3><a href="{{route("profile.show",$post->user->id)}}"> {{$post->user->name}}</a></h3>
+                        <h6>{{$post->created_at}}</h6>
 
                         <p>{{$post->body}}</p>
                         <div class="interaction">
