@@ -10,8 +10,8 @@
                 <div class="blog-post">
                     @foreach ($posts as $post)
                         <div class="post" data-postid="{{$post->id}}">
-                            <a href="#"><h3>{{$post->created_at}}</h3></a>
-                            <h6>Posted by {{$post->user->name}}</h6>
+                            <a href="#"><h3>Posted by {{$post->user->name}}</h3></a>
+                            <h6>{{$post->created_at}}</h6>
 
                             <p>{{$post->body}}</p>
                             <div class="interaction">
