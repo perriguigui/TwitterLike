@@ -3,9 +3,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
+                <img src="/uploads/banners/{{ $user->banner }}" style="width:900px; height:300px; float:left;">
                 <img src="/uploads/avatars/{{ $user->avatar }}" style="width:150px; height:150px; float:left; border-radius:50%; margin-right:25px;">
                 <h2>{{ $user->name }}'s Profile</h2>
+                <h4>{{ $user->city }}</h4>
+                <h4>{{ $user->link }}</h4>
+                <h4>{{ $user->description }}</h4>
             </div>
+
         </div>
         <div class="edit">
             <a href="{{route("profile.edit",$user->id)}}">Editer</a>

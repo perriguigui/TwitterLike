@@ -29,6 +29,18 @@ class UserController extends Controller
             $user->description=$attributes;
             $user->save();
         }
+        $attributes = request()->city;
+        if($attributes!=null){
+            $user = Auth::user();
+            $user->city=$attributes;
+            $user->save();
+        }
+        $attributes = request()->link;
+        if($attributes!=null){
+            $user = Auth::user();
+            $user->link=$attributes;
+            $user->save();
+        }
         // Logic for user upload of avatar
         if($request->hasFile('avatar')){
             $avatar = $request->file('avatar');
@@ -36,6 +48,15 @@ class UserController extends Controller
             Image::make($avatar)->resize(300, 300)->save( public_path('/uploads/avatars/' . $filename ) );
             $user = Auth::user();
             $user->avatar = $filename;
+            $user->save();
+        }
+        // Logic for user upload of avatar
+        if($request->hasFile('banner')){
+            $banner = $request->file('banner');
+            $filename = time() . '.' . $banner->getClientOriginalExtension();
+            Image::make($banner)->resize(1800, 600)->save( public_path('/uploads/banners/' . $filename ) );
+            $user = Auth::user();
+            $user->banner = $filename;
             $user->save();
         }
         return view('user.userProfile', ['user' => Auth::user()] );

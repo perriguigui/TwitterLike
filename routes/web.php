@@ -24,7 +24,7 @@ Route::post('/like','PostController@likePost')->name('like');
 
 Route::get('profile/{user}', 'UserController@show')->name('profile.show');
 Route::get('profile/{user}/edit', 'UserController@edit')->middleware('auth')->name('profile.edit');
-Route::patch('profile', 'UserController@update')->middleware('auth')->name('profile.update');
+Route::patch('profile/{user}', 'UserController@update')->middleware('auth')->name('profile.update');
 
 Route::get('profile/{profileId}/follow', 'UserController@followUser')->name('user.follow');
 
