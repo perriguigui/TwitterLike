@@ -31,6 +31,5 @@ Route::get('profile/{profileId}/follow', 'UserController@followUser')->name('use
 Route::get('/{profileId}/unfollow', 'UserController@unFollowUser')->name('user.unfollow');
 
 
-Route::post('/search', 'HomeController@search')->name('search');
-Route::get('/companies/{company}', 'CompanyController@show')->name('companies.show');
-Route::get('/categories/{category}', 'CategoryController@show')->name('categories.show');
+
+Route::get('/search', 'SearchController@search')->name('search');
