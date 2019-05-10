@@ -15,8 +15,9 @@ class PostController extends Controller
 {
 
     public function index(){
+        $search = request('search');
         $posts = Post::orderBy('created_at','desc')->get();
-        return view('home',['posts'=>$posts]);
+        return view('home',compact('posts','search'));
     }
 
     public function likePost(Request $request){

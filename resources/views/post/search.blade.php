@@ -2,27 +2,23 @@
 @extends('layout')
 @section('content')
 
-    <form action="{{ route('search') }}" method="POST">
-        @csrf
-        <input type="text" name="query" />
-        <input type="submit" class="btn btn-sm btn-primary" value="Search" />
-    </form>
-    <div class="card">
-        <div class="card-header"><b>{{ $searchResults->count() }} results found for "{{ request('query') }}"</b></div>
-
-        <div class="card-body">
-
-            @foreach($searchResults->groupByType() as $type => $modelSearchResults)
-                <h2>{{ ucfirst($type) }}</h2>
-
-                @foreach($modelSearchResults as $searchResult)
-                    <ul>
-                        <li><a href="{{ $searchResult->url }}">{{ $searchResult->title }}</a></li>
-                    </ul>
-                @endforeach
+    <div >
+        <h2 class="section-title"><i data-feather="search"></i>Search</h2>
+        <form class="search-form" action="{{route('search')}}" method="get">
+            <input type="text" name="search" class="width-50" placeholder="Search for a user name/pseudo." value="{{ $search }}">
+            <button type="submit" class="btn"><i data-feather="search">chercher</i></button>
+        </form>
+        <ul id="users" class="user-search-results">
+            @foreach($users as $user)
+                <li class="user-search-item"><a href="{{route('profile.show',$user->id)}}">{{$user->name}}</a></li>
             @endforeach
+            @foreach($posts as $post)
+                    <h2 class="user-search-item"><a href="{{route('profile.show',$user->id)}}">{{$post->user->name}}</a></h2>
+                    <p>{{$post->body}}</p>
+                @endforeach
+        </ul>
 
-        </div>
+
+
     </div>
-
 @endsection

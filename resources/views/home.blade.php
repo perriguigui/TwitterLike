@@ -5,8 +5,12 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
 
+                <form class="search-form" action="{{route('search')}}" method="get">
+                    <input type="text" name="search" class="width-50" placeholder="Search for a user name/pseudo." value="{{ $search }}">
+                    <button type="submit" class="btn"><i data-feather="search">chercher</i></button>
+                </form>
+                <div class="card-header">Dashboard</div>
                 <div class="blog-post">
                     @foreach ($posts as $post)
                         <div class="post" data-postid="{{$post->id}}">
