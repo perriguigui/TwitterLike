@@ -10,8 +10,23 @@ use App\Like;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
-class PostController extends Controller
+use Spatie\Searchable\Searchable;
+use Spatie\Searchable\SearchResult;
+
+class PostController extends Controller implements Searchable
 {
+    protected $fillable = ['name'];
+
+    public function getSearchResult(): SearchResult
+    {
+        $url = route('categories.show', $this->id);
+
+        return new SearchResult(
+            $this,
+            $this->name,
+            $url
+        );
+    }
     public function index(){
         $posts = Post::orderBy('created_at','desc')->get();
         return view('home',['posts'=>$posts]);

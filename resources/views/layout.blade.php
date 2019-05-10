@@ -15,7 +15,7 @@
 <div id="app">
     <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}">
+            <a class="navbar-brand" href="{{route('home')}}">
                 Twitter
             </a>
 
@@ -59,7 +59,7 @@
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
-                                <a href="/profile">User Profile</a>
+                                <a href="{{route('profile.show',Auth::user()->id)}}">User Profile</a>
 
                                 </a>
 

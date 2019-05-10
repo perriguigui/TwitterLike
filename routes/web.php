@@ -29,3 +29,8 @@ Route::patch('profile/{user}', 'UserController@update')->middleware('auth')->nam
 Route::get('profile/{profileId}/follow', 'UserController@followUser')->name('user.follow');
 
 Route::get('/{profileId}/unfollow', 'UserController@unFollowUser')->name('user.unfollow');
+
+
+Route::post('/search', 'HomeController@search')->name('search');
+Route::get('/companies/{company}', 'CompanyController@show')->name('companies.show');
+Route::get('/categories/{category}', 'CategoryController@show')->name('categories.show');
