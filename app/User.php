@@ -5,9 +5,28 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-
-class User extends Authenticatable
+use Spatie\Searchable\Searchable;
+use Spatie\Searchable\SearchResult;
+class User extends Authenticatable implements Searchable
 {
+
+    public function post()
+    {
+        return $this->belongsTo(Post::class);
+    }
+
+    public function getSearchResult(): SearchResult
+    {
+        $url = route('post.search', $this->id);
+
+        return new SearchResult(
+            $this,
+            $this->name,
+            $url
+        );
+    }
+
+
     use Notifiable;
 
     /**
