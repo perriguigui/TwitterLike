@@ -9,10 +9,13 @@
             <button type="submit" class="btn"><i data-feather="search">chercher</i></button>
         </form>
         <ul id="users" class="user-search-results">
+            <h1>User</h1>
             @foreach($users as $user)
                 <li class="user-search-item"><a href="{{route('profile.show',$user->id)}}">{{$user->name}}</a></li>
             @endforeach
+                <h1>Post</h1>
             @foreach($posts as $post)
+
                     <h2 class="user-search-item"><a href="{{route('profile.show',$user->id)}}">{{$post->user->name}}</a></h2>
                     <p>{{$post->body}}</p>
                 @endforeach

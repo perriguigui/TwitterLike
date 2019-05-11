@@ -23,6 +23,11 @@
                     <p>faut se connecter pour liker</p>
                 @endif
             </div>
+            @if(Auth::user()==$post->user)
+                <a href="">Edit</a>
+                <a href="">Delete</a>
+             @endif
+
         </div>
     @endforeach
 </div>

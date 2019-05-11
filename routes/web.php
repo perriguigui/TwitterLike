@@ -21,7 +21,9 @@ Route::get('/home', 'PostController@index')->name('home');
 
 Route::resource('post','PostController');
 Route::post('/like','PostController@likePost')->name('like');
-
+Route::post('/createpost', 'PostController@postCreatePost')->middleware('auth')->name('post.create');
+Route::post('/edit','PostController@postEditPost')->name('edit');
+Route::get('/delete-post/{post_id}', 'PostController@getDeletePost')->middleware('auth')->name('post.delete');
 Route::get('profile/{user}', 'UserController@show')->name('profile.show');
 Route::get('profile/{user}/edit', 'UserController@edit')->middleware('auth')->name('profile.edit');
 Route::patch('profile/{user}', 'UserController@update')->middleware('auth')->name('profile.update');
