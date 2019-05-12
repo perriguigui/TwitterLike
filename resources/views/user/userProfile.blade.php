@@ -12,9 +12,11 @@
             </div>
 
         </div>
+        @if(Auth::user()==$user)
         <div class="edit">
             <a href="{{route("profile.edit",$user->id)}}">Editer</a>
         </div>
+        @endif
         <div class="blog-post">
             <a href="{{ route('user.follow', $user->id )}}">Follow User</a>
             <a href="{{ route('user.unfollow', $user->id )}}">Unollow User</a>
@@ -31,16 +33,43 @@
                             @else
                                 <p>faut se connecter pour liker</p>
                             @endif
+                                @if(Auth::user()==$post->user)
+                                    <a href="#" class="edit">Edit</a>
+                                    <a href="{{ route('post.delete', ['post_id' => $post->id]) }}">Delete</a>
+                                @endif
                         </div>
                     </div>
                 @endforeach
             </div>
 
-            <script src="{{asset('/js/like.js')}}" type="text/javascript"></script>
-            <script type="text/javascript">
-                var token ='{{Session::token()}}';
-                var urlLike = '{{route('like')}}';
-            </script>
+        <div class="modal fade" tabindex="-1" role="dialog" id="edit-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Edit Post</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="post-body">Edit the Post</label>
+                                <textarea class="form-control" name="post-body" id="post-body" rows="5"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="modal-save">Save changes</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <script src="{{asset('/js/like.js')}}" type="text/javascript"></script>
+        <script type="text/javascript">
+            var token ='{{Session::token()}}';
+            var urlLike = '{{route('like')}}';
+            var urlEdit = '{{ route('edit') }}';
+        </script>
         </div>
 
     @endsection

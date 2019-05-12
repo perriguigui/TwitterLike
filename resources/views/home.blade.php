@@ -7,7 +7,7 @@
             <header><h3>What do you have to say?</h3></header>
             <form action="{{ route('post.create') }}" method="post">
                 <div class="form-group">
-                    <textarea class="form-control" name="body" id="new-post" rows="5" placeholder="Your Post"></textarea>
+                    <textarea class="form-control" name="body" id="new-post" rows="5" placeholder="Your tweet with a limit of 140 caracters" maxlength="140"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Create Post</button>
                 <input type="hidden" value="{{ Session::token() }}" name="_token">
@@ -32,6 +32,7 @@
                             <p>{{$post->body}}</p>
                             <div class="interaction">
                                 @if (Auth::check())
+                                    <p>nb de like:{{count($post->likes)}}</p>
                                     <a href="" class="like">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==1 ? 'You Like':'Like':'Like'}}</a>
                                     <a href="" class="like">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==0 ? 'You Dislike':'Dislike':'Dislike'}}</a>
                                 @else
