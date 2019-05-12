@@ -16,7 +16,16 @@ class PostController extends Controller
 
     public function index(){
         $search = request('search');
-        $posts = Post::orderBy('created_at','desc')->get();
+        $id = Auth::id();
+        $posts = Post::whereIn('user_id', function($query) use($id)
+        {
+            $query->select('leader_id')
+                ->from('followers')
+                ->where('follower_id', $id)->latest();
+        })->orWhere('user_id', $id)->latest()->get();
+
+
+
         return view('home',compact('posts','search'));
     }
 

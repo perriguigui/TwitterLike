@@ -24,6 +24,7 @@
                 </form>
                 <div class="card-header">Dashboard</div>
                 <div class="blog-post">
+                    @if(count($posts)>0)
                     @foreach ($posts as $post)
                         <h3><a href="{{route("profile.show",$post->user->id)}}"> {{$post->user->name}}</a></h3>
                         <h6>{{$post->created_at}}</h6>
@@ -44,6 +45,9 @@
                             </div>
                         </article>
                     @endforeach
+                    @else
+                        <h3>C'est ici que tu pourras suivre les tweets des personnes suivi. Mais pour cela il faut d'abord en suivre. Tu peux ainsi en rechercher dans la bar de recherche siyué ci-dessus</h3>
+                    @endif
                 </div>
 
                 <div class="modal fade" tabindex="-1" role="dialog" id="edit-modal">

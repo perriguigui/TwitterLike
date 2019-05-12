@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\User;
 use Auth;
 use Image;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -109,6 +110,15 @@ class UserController extends Controller
             return redirect()->back()->with('error', 'User does not exist.');
         }
 
+        $result = DB::table('followers')
+            ->where('follower_id', '=', Auth::user()->id)
+            ->where('leader_id', '=', $user->id)
+            ->exists();
+
+        if ($result) {
+            return redirect()->back()->with('error', 'User already followed.');
+        }
+
         $user->followers()->attach(auth()->user()->id);
 
         return redirect()->back()->with('success', 'Successfully followed the user.');
@@ -134,5 +144,6 @@ class UserController extends Controller
         return redirect()->back()->with('success', 'Successfully unfollowed the user.');
 
     }
+
 
 }
