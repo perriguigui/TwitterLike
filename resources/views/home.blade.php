@@ -7,7 +7,7 @@
             <header><h3>What do you have to say?</h3></header>
             <form action="{{ route('post.create') }}" method="post">
                 <div class="form-group">
-                    <textarea class="form-control" name="body" id="new-post" rows="5" placeholder="Your tweet with a limit of 140 caracters" maxlength="140"></textarea>
+                    <textarea style="resize: none" class="form-control" name="body" id="new-post" rows="5" placeholder="Your tweet with a limit of 140 caracters" maxlength="140"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Create Post</button>
                 <input type="hidden" value="{{ Session::token() }}" name="_token">
