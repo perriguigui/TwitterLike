@@ -1,9 +1,12 @@
 var postId=0;
 
 $('.like').on('click',function(event){
-    console.log(event);
     postId = event.target.parentNode.parentNode.dataset['postid'];
-    var isLike = event.target.previousElementSibling == null;
+     if(event.target.parentNode.parentNode.dataset['like'].like==0){
+         var isLike = true;
+     }else{
+         var islike = false;
+     }
 
     $.ajax({
         method:'POST',
@@ -11,12 +14,7 @@ $('.like').on('click',function(event){
         data:{isLike: isLike, postId: postId, _token: token}
     })
         .done(function(){
-            event.target.innerHTML = isLike ? event.target.innerHTML == 'Like' ? 'you like':'Lgike':'te';
-            if(isLike){
-                event.target.innerHTML ='Dislike';
-            }else{
-                event.target.innerHTML ='Like';
-            }
+            event.target.innerHTML = isLike ? 'you like':'Like';
         });
 });
 

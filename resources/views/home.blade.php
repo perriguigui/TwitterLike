@@ -33,7 +33,7 @@
                             <div class="interaction">
                                 @if (Auth::check())
                                     <p>nb de like:{{count($post->likes)}}</p>
-                                    <a href="" class="like">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? 'You Like':' you Like'}}</a>
+                                    <a href="" class="like">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? 'You Like':' Like'}}</a>
 
                                 @else
                                     <p>faut se connecter pour liker</p>
