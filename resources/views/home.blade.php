@@ -28,23 +28,27 @@
                     @foreach ($posts as $post)
                         <h3><a href="{{route("profile.show",$post->user->id)}}"> {{$post->user->name}}</a></h3>
                         <h6>{{$post->created_at}}</h6>
-                        <article class="post" data-postid="{{$post->id}}">
-                            <p>{{$post->body}}</p>
-                            <div class="interaction">
-                                @if (Auth::check())
-                                    <p>nb de like:{{count($post->likes)}}</p>
-                                    <a href="" class="like">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? 'You Like':' Like'}}</a>
+                            <article class="post" data-postid="{{$post->id}}">
+                                <p>{{$post->body}}</p>
+                                <p>nb de like:{{count($post->likes)}}</p>
+                                <div class="interaction">
 
-                                @else
-                                    <p>faut se connecter pour liker</p>
-                                @endif
+                                    @if (Auth::check())
 
-                                @if(Auth::user()==$post->user)
-                                    <a href="#" class="edit">Edit</a>
-                                    <a href="{{ route('post.delete', ['post_id' => $post->id]) }}">Delete</a>
-                                @endif
-                            </div>
-                        </article>
+                                        <a href="" class="like">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==1 ? 'You Like':'Like':'Like'}}</a>
+                                        <a href="" class="like">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==0 ? 'You Dislike':'Dislike':'Dislike'}}</a>
+
+                                    @else
+                                        <p>faut se connecter pour liker</p>
+                                    @endif
+
+                                    @if(Auth::user()==$post->user)
+                                        <a href="#" class="edit">Edit</a>
+                                        <a href="{{ route('post.delete', ['post_id' => $post->id]) }}">Delete</a>
+                                    @endif
+                                </div>
+                            </article>
+
                     @endforeach
                     @else
                         <h3>C'est ici que tu pourras suivre les tweets des personnes suivi. Mais pour cela il faut d'abord en suivre. Tu peux ainsi en rechercher dans la bar de recherche siyué ci-dessus</h3>
@@ -75,6 +79,7 @@
                 </div><!-- /.modal -->
 
                 <script src="{{asset('/js/like.js')}}" type="text/javascript"></script>
+                <script src="{{asset('/js/retweet.js')}}" type="text/javascript"></script>
                 <script type="text/javascript">
                     var token ='{{Session::token()}}';
                     var urlLike = '{{route('like')}}';

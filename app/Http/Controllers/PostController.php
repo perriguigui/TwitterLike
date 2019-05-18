@@ -32,7 +32,6 @@ class PostController extends Controller
     public function likePost(Request $request){
         $post_id = $request['postId'];
         $is_like = $request['isLike']==='true';
-
         $update = false;
         $post = Post::find($post_id);
         if(!$post){
@@ -44,14 +43,13 @@ class PostController extends Controller
             $already_like=$like->like;
             $update = true;
             if($already_like == $is_like){
-                $like->like = 0;
-                $like->update();
+                $like->delete();
                 return null;
             }
         }else{
             $like = new like();
         }
-        $like->like = 1;
+        $like->like = $is_like;
         $like->user_id = $user->id;
         $like->post_id = $post->id;
 
