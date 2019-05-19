@@ -1,0 +1,18 @@
+.searchstyle-1{
+    border-bottom: 1px solid #e11531;
+    box-shadow: 0 1px 0 0 #e11531;
+}
+
+.searchstyle-2{
+    border-bottom: 1px solid rgba(225, 40, 5, 0.6);
+    box-shadow: 0 1px 0 0 rgba(225, 40, 5, 0.6);
+}
+
+.profilename{
+    color:#272932;
+    font-size: large;
+
+}
+.post-css{
+    color:#272932;
+}

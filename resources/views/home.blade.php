@@ -2,36 +2,39 @@
 
 @section('content')
 <div class="container">
+
     <section class="row new-post">
-        <div class="col-md-6 col-md-offset-3">
-            <header><h3>What do you have to say?</h3></header>
+        <div class="col-md-6 col-sm-10 col-10 col-lg-6 mx-auto card">
+            <div class="card-header cardHeaderStyle mx-auto px-5 mt-2 mb-5 border-bottom border-danger rounded"><h3>What do you have to say?</h3></div>
             <form action="{{ route('post.create') }}" method="post">
                 <div class="form-group">
                     <textarea style="resize: none" class="form-control" name="body" id="new-post" rows="5" placeholder="Your tweet with a limit of 140 caracters" maxlength="140"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Create Post</button>
+                <button type="submit" class="btn btn-light btnstyle-1 mb-4">Create Post</button>
                 <input type="hidden" value="{{ Session::token() }}" name="_token">
             </form>
         </div>
     </section>
-    <div class="row justify-content-center">
+
+    <div class="row justify-content-center my- mt-5">
         <div class="col-md-8">
             <div class="card">
 
-                <form class="search-form" action="{{route('search')}}" method="get">
-                    <input type="text" name="search" class="width-50" placeholder="Search for a user name/pseudo." value="{{ $search }}">
-                    <button type="submit" class="btn"><i data-feather="search">chercher</i></button>
+                <form class="md-form mt-0 form-group searchstyle-1" action="{{route('search')}}" method="get">
+                    <input type="text" name="search" class="ml-4  col-4 width-50 rounded-pill "  placeholder="Search for a user name/pseudo"value="{{ $search }}">
+                    <button type="submit" class="btn btn-outline-danger "><i data-feather="search">chercher</i></button>
                 </form>
-                <div class="card-header">Dashboard</div>
+
+               <!-- <div class="card-header">Dashboard</div>-->
                 <div class="blog-post">
                     @if(count($posts)>0)
                     @foreach ($posts as $post)
-                        <h3><a href="{{route("profile.show",$post->user->id)}}"> {{$post->user->name}}</a></h3>
+                        <h3><a href="{{route("profile.show",$post->user->id)}}"class="ml-3 profilename"> {{$post->user->name}}</a></h3>
                         <h6>{{$post->created_at}}</h6>
-                            <article class="post" data-postid="{{$post->id}}">
+                            <article class="post mx-3 post-css" data-postid="{{$post->id}}">
                                 <p>{{$post->body}}</p>
                                 <p>nb de like:{{count($post->likes)}}</p>
-                                <div class="interaction">
+                                <div class="interaction searchstyle-2">
 
                                     @if (Auth::check())
 
