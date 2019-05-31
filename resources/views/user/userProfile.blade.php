@@ -1,9 +1,11 @@
 @extends('layout')
 @section('content')
+
+    <p class="big-name affix my-auto" style="left:-2em">{{ Auth::user()->name }}</p>
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                <img src="/uploads/banners/{{ $user->banner }}" style="width:900px; height:300px; float:left;">
+                <img src="/uploads/banners/{{ $user->banner }}" class="banner-style">
                 <img src="/uploads/avatars/{{ $user->avatar }}" style="width:150px; height:150px; float:left; border-radius:50%; margin-right:25px;">
                 <h2>{{ $user->name }}'s Profile</h2>
                 <h4>{{ $user->city }}</h4>
@@ -21,15 +23,21 @@
             <a href="{{ route('user.follow', $user->id )}}">Follow User</a>
             <a href="{{ route('user.unfollow', $user->id )}}">Unollow User</a>
                 @foreach ($user->posts as $post)
-                    <div class="post" data-postid="{{$post->id}}">
-                        <h3><a href="{{route("profile.show",$post->user->id)}}"> {{$post->user->name}}</a></h3>
-                        <h6>{{$post->created_at}}</h6>
+                <div class=" card-style1 card mx-auto  ">
+                    <div class="post mx-3 post-css" data-postid="{{$post->id}}">
+                        <div>
+                            <a href="#">
+                                <img src="/uploads/avatars/{{ Auth::user()->avatar }}" width="35px" height="35px" class="rounded-circle photo-style1 ">
+                            </a>
+                            <a href="{{route("profile.show",$post->user->id)}}" class=" col-3 profilename "> {{$post->user->name}}</a>
+                        </div>
+                            <h6 class="offset-1 date-style">{{$post->created_at}}</h6>
 
                         <p>{{$post->body}}</p>
-                        <div class="interaction">
+                        <div class="interaction my-3 ">
                             @if (Auth::check())
-                                <a href="#" class="like">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==1 ? 'You Like':'Like':'Like'}}</a>
-                                <a href="#" class="like">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==0 ? 'You Dislike':'Dislike':'Dislike'}}</a>
+                                <a href="#" class="like fas fa-thumbs-up">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==1 ? 'You Like':'Like':'Like'}}</a>
+                                <a href="#" class="like fas fa-thumbs-down">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==0 ? 'You Dislike':'Dislike':'Dislike'}}</a>
                             @else
                                 <p>faut se connecter pour liker</p>
                             @endif
@@ -39,6 +47,7 @@
                                 @endif
                         </div>
                     </div>
+                </div>
                 @endforeach
             </div>
 

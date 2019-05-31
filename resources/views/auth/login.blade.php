@@ -5,7 +5,7 @@
 
 
     <div class="row justify-content-center ">
-        <div class=" col-md-12 " >
+        <div class="col-md-12" >
             <div class="card loginCard mx-md-auto mx-sm-0 " style="width: 70rem;"  >
 
                 <div class="card-header cardHeaderStyle mx-auto px-5 mt-2 mb-5 border-bottom border-danger rounded" >{{ __('Login') }}</div>

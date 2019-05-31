@@ -1,18 +1,112 @@
-.searchstyle-1{
-    border-bottom: 1px solid #e11531;
-    box-shadow: 0 1px 0 0 #e11531;
+/*Background*/
+body {
+    margin-top: 100px;
 }
+html{
+    background-color: rgb(230, 230, 230);
+}
+.backcolor{
+    background-color: rgb(230, 230, 230);
+
+}
+.big-name:hover {
+    color: #d62c10;
+}
+.big-name {
+    color: white;
+    font-size: 6em;
+    transform: rotate(-90deg);
+    bottom:350px;
+    transition: color 300ms ease;
+}
+
+
+.profilename{
+    color: #1d1d1d;
+    display: inline;
+    font-size: medium;
+
+
+}
+.post-css{
+    color: #000000;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top:10px;
+}
+
+
+/*Search Bar*/
+
+.search-block {
+    background-color: white;
+    border-radius: 20px;
+}
+
+
+.searchstyle-1{
+     border-bottom: 1px solid #e11531;
+     box-shadow: 0 1px 0 0 #e11531;
+     border:white;
+     padding-bottom: 3px;
+     padding-top: 3px;
+ }
 
 .searchstyle-2{
     border-bottom: 1px solid rgba(225, 40, 5, 0.6);
     box-shadow: 0 1px 0 0 rgba(225, 40, 5, 0.6);
 }
 
-.profilename{
-    color:#272932;
-    font-size: large;
+.search-icon{
+    padding: auto;
+    color: #f5f5f5;
+}
 
+.search-icon:hover{
+    color:black;
 }
-.post-css{
-    color:#272932;
+
+/*Button*/
+
+.btn-css{
+    height: 40px;
+    width: 40px;
+    border: white;;
+    background-color: #E11531;
+    border-radius: 30px;
+    padding: 10px;
 }
+.btn-css:hover{
+
+    background-color: #fefff7;
+}
+
+
+
+/*Card style*/
+
+.card-style1{
+    border: white;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 5px;
+    margin-bottom:10px;
+
+    width:80%;
+    font-size: small;
+}
+
+.photo-style1{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
+
+
+.date-style{
+    color: #8a8a8a;
+    margin-left: 10%;
+}
+
+
