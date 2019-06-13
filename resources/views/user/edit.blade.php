@@ -10,7 +10,7 @@
                     @method('PATCH')
                     @csrf
 
-                    <img src="/uploads/banners/{{ $user->banner }}" style="width:900px; height:300px; float:left;">
+                    <img src="/uploads/banners/{{ $user->banner }}" >
                     <label>Update Banner Image</label>
                     <input type="file" name="banner">
 

@@ -2,13 +2,13 @@
 
 @section('content')
 
-    <p class="big-name affix my-auto" style="left: 0">Actualité</p>
+    <p class="big-name " >Actualité</p>
 
 
 
     <div class="row justify-content-center  mt-5 ">
         <div class="col-md-8">
-            <div class="search-block col-sm-8 col-10 col-lg-5 mx-auto mx-lg-auto card mb-3  ">
+            <div class="search-block col-sm-8 col-10 col-lg-6 mx-auto mx-lg-auto card mb-3  ">
                 <form class="search-form  mb-3 py-3"  action="{{route('search')}}" method="get">
                     <input type="text" name="search" class="ml-4 mr-3 mt-4   searchstyle-1 "  placeholder=" Search Username " value="{{ $search }}">
                     <button type="submit" class="btn-css"><i class="fas fa-search search-icon "></i></button>
@@ -16,7 +16,7 @@
 
             </div>
             <div class=" mx-auto card card-style1 border border-light">
-                <div class="cardHeaderStyle mx-auto px-5 mt-2 mb-5 border-bottom border-danger rounded"><h3>What do you have to say?</h3></div>
+                <div class="cardHeaderStyle mx-auto px-5 mt-2 mb-5 border-bottom border-danger rounded text-center"><h3>What do you have to say?</h3></div>
                 <form action="{{ route('post.create') }}" method="post">
                     <div class="form-group  mx-4">
                         <textarea style="resize: none " class="form-control " name="body" id="new-post" rows="4" placeholder="Your tweet with a limit of 140 caracters" maxlength="140"></textarea>
@@ -35,20 +35,20 @@
                             <div class=" card-style1 card mx-auto  ">
                                 <div>
                                   <a href="#">
-                                     <img src="/uploads/avatars/{{ Auth::user()->avatar }}" width="35px" height="35px" class="rounded-circle photo-style1 ">
+                                     <img src="/uploads/avatars/{{ $post->user->avatar}}" width="35px" height="35px" class="rounded-circle photo-style1 ">
                                   </a>
                                    <a href="{{route("profile.show",$post->user->id)}}"class=" col-3 profilename "> {{$post->user->name}}</a>
                                  </div>
                                 <p class="offset-1 date-style">{{$post->created_at}}<p>
                                     <article class="post mx-3 post-css" data-postid="{{$post->id}}">
                                         <p>{{$post->body}}</p>
-                                        <p>nb de like:{{count($post->likes)}}</p>
+
                                         <div class="interaction my-3">
 
                                             @if (Auth::check())
-
-                                                <a href="" class="like fas fa-thumbs-up">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==1 ? 'You Like':'Like':'Like'}}</a>
-                                                <a href="" class="like fas fa-thumbs-down">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==0 ? ' ':' ':' '}}</a>
+                                                <p class="d-inline">{{count($post->likes)}}</p>
+                                                <a href="" class="like fas fa-thumbs-down">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==1 ? ' You Dislike':' Disike':' Dislike '}}</a>
+                                                <a href="" class="like fas fa-thumbs-up">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==0 ? ' You Like':' Like ':' Like '}}</a>
 
                                             @else
                                                 <p>faut se connecter pour liker</p>
@@ -64,7 +64,7 @@
 
                         @endforeach
                         @else
-                            <h3>C'est ici que tu pourras suivre les tweets des personnes suivi. Mais pour cela il faut d'abord en suivre. Tu peux ainsi en rechercher dans la bar de recherche situé ci-dessus</h3>
+                            <h3 style="text-align: center;color:#343434;">C'est ici que tu pourras suivre les tweets des personnes suivi. Mais pour cela il faut d'abord en suivre. Tu peux ainsi en rechercher dans la bar de recherche situé ci-dessus</h3>
                         @endif
                     </div>
 

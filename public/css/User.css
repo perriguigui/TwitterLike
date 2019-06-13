@@ -1,9 +1,78 @@
 .banner-style{
     object-fit: cover;
-    width:900px;
-    height:300px;
+}
 
+@media only screen and (max-width: 1200px) and (min-width: 992px) {
+    img.avatar_style {
+        top: 7em;
+    }
 
+    h2.profil-name{
+        position: absolute;
+        left:6em;
+        top:6em;
+    }
 
+}
 
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    img.avatar_style {
+        top: 4em;
+        width:150px;
+    }
+    h2.profil-name{
+        position: absolute;
+        left:5em;
+        top:4em;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    img.avatar_style {
+        top: 3em;
+        width:120px;
+    }
+    h2.profil-name{
+        position: absolute;
+        left:5em;
+        top:3em;
+    }
+}
+
+.avatar_style{
+    position: absolute;
+    top:9em;
+    width:180px;
+    float:left;
+    border-radius:50%;
+    border-color: white;
+    margin-right:25px;
+}
+
+.profil-name{
+    position: absolute;
+    left:6em;
+    top:7em;
+    color: #ffffff;
+
+}
+
+.info-css{
+    color: #323232;
+}
+
+.editfollow-style{
+    position: absolute;
+    left:37em;
+    top:16em;
+    font-size: 1.2em;
+
+}
+
+.btn-hover1:hover{
+    background-color: rgba(165, 165, 165, 0.31)
+}
+.btn-hover1{
+    padding: 5px;
+    border-radius: 15px;
 }

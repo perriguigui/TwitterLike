@@ -1,33 +1,44 @@
 @extends('layout')
 @section('content')
 
-    <p class="big-name affix my-auto" style="left:-2em">{{ Auth::user()->name }}</p>
+    <p class="big-name " id="big_nameProfil">Profil</p>
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                <img src="/uploads/banners/{{ $user->banner }}" class="banner-style">
-                <img src="/uploads/avatars/{{ $user->avatar }}" style="width:150px; height:150px; float:left; border-radius:50%; margin-right:25px;">
-                <h2>{{ $user->name }}'s Profile</h2>
-                <h4>{{ $user->city }}</h4>
-                <h4>{{ $user->link }}</h4>
-                <h4>{{ $user->description }}</h4>
+
+                    <img src="/uploads/banners/{{ $user->banner }}" class="banner-style">
+                    <img src="/uploads/avatars/{{ $user->avatar }}" class="avatar_style ">
+                    <h2 class="profil-name">{{ $user->name }}</h2>
+                <div class="editfollow-style">
+                    @if(Auth::user()==$user)
+                        <div class="edit d-inline-block mr-4">
+                            <a href="{{route("profile.edit",$user->id)}}"style="color: #ffffff;" class="btn-hover1">Editer</a>
+                        </div>
+                    @endif
+                    <a href="{{ route('user.follow', $user->id )}}"style="color: #ffffff;" class="mr-4 btn-hover1">Follow User</a>
+                    <a href="{{ route('user.unfollow', $user->id )}}" style="color: #ffffff;" class="btn-hover1">Unollow User</a>
+                </div>
+                <div class=" card-style1 card_city card mt-4 col-6 px-4 py-4 mx-auto " >
+                    <p class="info-css">city</p>
+                    <h4 >{{ $user->city }}</h4>
+                    <p>link</p>
+                    <h4 >{{ $user->link }}</h4>
+                    <p>user description</p>
+                    <h4 >{{ $user->description }}</h4>
+                </div>
+
+
             </div>
 
         </div>
-        @if(Auth::user()==$user)
-        <div class="edit">
-            <a href="{{route("profile.edit",$user->id)}}">Editer</a>
-        </div>
-        @endif
-        <div class="blog-post">
-            <a href="{{ route('user.follow', $user->id )}}">Follow User</a>
-            <a href="{{ route('user.unfollow', $user->id )}}">Unollow User</a>
+
+              <div class="blog-post">
                 @foreach ($user->posts as $post)
                 <div class=" card-style1 card mx-auto  ">
                     <div class="post mx-3 post-css" data-postid="{{$post->id}}">
                         <div>
                             <a href="#">
-                                <img src="/uploads/avatars/{{ Auth::user()->avatar }}" width="35px" height="35px" class="rounded-circle photo-style1 ">
+                                <img src="/uploads/avatars/{{ $post->user->avatar }}" width="35px" height="35px" class="rounded-circle photo-style1 ">
                             </a>
                             <a href="{{route("profile.show",$post->user->id)}}" class=" col-3 profilename "> {{$post->user->name}}</a>
                         </div>

@@ -1,6 +1,9 @@
 /*Background*/
+@import url('https://fonts.googleapis.com/css?family=Exo:500&display=swap');
 body {
     margin-top: 100px;
+    font-family: 'Exo';
+
 }
 html{
     background-color: rgb(230, 230, 230);
@@ -9,14 +12,86 @@ html{
     background-color: rgb(230, 230, 230);
 
 }
+/*Texte en fond à gauche*/
+
+@media only screen and (min-width: 1980px){
+
+    p.big-name {
+
+
+        left: 3vw;
+        text-align: center;
+        transform: rotate(-90deg);
+    }
+}
+
+@media only screen and (max-width: 1980px) and (min-width: 1330px){
+
+p.big-name {
+
+
+        left: 3vw;
+        text-align: center;
+        transform: rotate(-90deg);
+    }
+}
+
+
+
+@media only screen and (max-width: 1330px) and (min-width: 820px){
+
+    p.big-name {
+
+
+        left: 0vw;
+        text-align: center;
+
+    }
+}
+
+
+/*@media only screen and (max-width: 900px) and (min-width: 820px){
+
+    p.big-name {
+
+
+        left: -2vw;
+        text-align: center;
+
+    }
+}*/
+
+@media only screen and (max-width: 820px) and (min-width: 690px){
+
+    p.big-name {
+
+
+        left: -3vw;
+        text-align: center;
+
+    }
+}
+@media only screen and (max-width: 690px){
+
+    p.big-name {
+
+
+
+        font-size:0;
+
+
+    }
+}
 .big-name:hover {
     color: #d62c10;
 }
 .big-name {
+
+    top: 45vh;
+    position:fixed;
     color: white;
-    font-size: 6em;
+    font-size: 6vw;
     transform: rotate(-90deg);
-    bottom:350px;
     transition: color 300ms ease;
 }
 
@@ -32,7 +107,8 @@ html{
     color: #000000;
     padding-right: 5%;
     padding-left: 5%;
-    padding-top:10px;
+    padding-top:5px;
+    padding-bottom:5px;
 }
 
 
@@ -95,6 +171,7 @@ html{
     width:80%;
     font-size: small;
 }
+
 
 .photo-style1{
     margin-top: 10px;

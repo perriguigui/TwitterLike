@@ -55,7 +55,7 @@ class UserController extends Controller
         if($request->hasFile('banner')){
             $banner = $request->file('banner');
             $filename = time() . '.' . $banner->getClientOriginalExtension();
-            Image::make($banner)->resize(1800, 600)->save( public_path('/uploads/banners/' . $filename ) );
+            Image::make($banner)->crop(1800, 600)->save( public_path('/uploads/banners/' . $filename ) );
             $user = Auth::user();
             $user->banner = $filename;
             $user->save();
