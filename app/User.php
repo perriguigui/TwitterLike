@@ -72,7 +72,7 @@ class User extends Authenticatable implements Searchable
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function posts(){
-        return $this->hasMany('App\Post');
+        return $this->hasMany('App\Post')->latest();
     }
 
     /**
