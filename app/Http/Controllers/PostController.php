@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Post;
 use App\Like;
+use App\Retweet;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
@@ -24,9 +25,21 @@ class PostController extends Controller
                 ->where('follower_id', $id)->latest();
         })->orWhere('user_id', $id)->latest()->get();
 
+        $retweets = Retweet::whereIn('user_id', function($query) use($id)
+        {
+            $query->select('leader_id')
+                ->from('followers')
+                ->where('follower_id', $id)->latest();
+        })->orWhere('user_id', $id)->latest()->get();
+
+        foreach ($retweets as $retweet){
+            $postfromretweet = $retweet->post;
+            $merged = $posts->add($postfromretweet);
+        }
 
 
-        return view('home',compact('posts','search'));
+
+        return view('home',compact('merged','search'));
     }
 
     public function likePost(Request $request){

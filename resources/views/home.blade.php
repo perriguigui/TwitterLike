@@ -29,9 +29,9 @@
                     <div class="blog-post">
 
 
-
-                        @if(count($posts)>0)
-                        @foreach ($posts as $post)
+                        @if(count($merged)>0)
+                        @foreach ($merged as $post)
+                            {{$post->retweet}}
                             <div class=" card-style1 card mx-auto   ">
                                 <div>
                                   <a href="{{route("profile.show",$post->user->id)}}">
@@ -43,10 +43,11 @@
                                     <article class="post mx-3 post-css" data-postid="{{$post->id}}">
                                         <p>{{$post->body}}</p>
                                         <p class="d-inline">{{count($post->likes)}}</p>
+
+                                        @if (Auth::check())
+                                        <a href="{{ route('retweet', ['user_id' => Auth::user()->id,'post_id' => $post->id]) }}" class="color_rouge">Retweet</a>
+
                                         <div class="interaction my-3 color_rouge">
-
-                                            @if (Auth::check())
-
                                                 <a href="" class="like fas fa-thumbs-down color_rouge ml-1">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==1 ? '  ':' ':'  '}}</a>
                                                 <a href="" class="like fas fa-thumbs-up color_rouge ml-3" >{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==0 ? '  ':'  ':'  '}}</a>
 

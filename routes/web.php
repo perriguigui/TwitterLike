@@ -27,7 +27,7 @@ Route::get('/delete-post/{post_id}', 'PostController@getDeletePost')->middleware
 Route::get('profile/{user}', 'UserController@show')->name('profile.show');
 Route::get('profile/{user}/edit', 'UserController@edit')->middleware('auth')->name('profile.edit');
 Route::patch('profile/{user}', 'UserController@update')->middleware('auth')->name('profile.update');
-
+Route::get('/retweet', 'RetweetController@retweet')->name('retweet');
 Route::get('profile/{profileId}/follow', 'UserController@followUser')->name('user.follow');
 
 Route::get('/{profileId}/unfollow', 'UserController@unFollowUser')->name('user.unfollow');
