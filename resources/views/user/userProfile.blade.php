@@ -24,12 +24,13 @@
 
 
             <div class="blog-post mx-auto mt-4 col-8">
-                <div class=" card-style1 card p-4 py-4" >
+                <div class=" card-style1 card p-4 py-4  " >
                     <p class="info-css">city</p>
-                    <p>link</p>
-                    <h4 >{{ $user->link }}</h4>
-                    <p>user description</p>
-                    <h4 >{{ $user->description }}</h4>
+                    <p style="text-align: center">{{ $user->city }}</p>
+                    <p class="info-css">link</p>
+                    <p style="text-align: center">{{ $user->link }}</p>
+                    <p class="info-css"> user description</p>
+                    <p style="text-align: center">{{ $user->description }}</p>
                 </div>
                 @foreach ($user->posts as $post)
                 <div class=" card-style1 card p-4 py-4  mt-4 ">
@@ -43,9 +44,10 @@
                         <h6 class="offset-1 date-style">{{$post->created_at}}</h6>
 
                         <p>{{$post->body}}</p>
-                        <div class="interaction my-3 color_rouge ">
+
+                        <p class="d-inline color_rouge">{{count($post->likes)}}</p>
+                        <div class="interaction my-3 d-inline ">
                             @if (Auth::check())
-                                <p class="d-inline">{{count($post->likes)}}</p>
                                 <a href="#" class="like fas fa-thumbs-up color_rouge ml-1">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==1 ? '':'':''}}</a>
                                 <a href="#" class="like fas fa-thumbs-down color_rouge ml-3">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==0 ? ' ':'':''}}</a>
                             @else
@@ -56,6 +58,7 @@
                                     <a href="{{ route('post.delete', ['post_id' => $post->id]) }}" class="color_rouge">Delete</a>
                                 @endif
                         </div>
+
                     </div>
                 </div>
                 @endforeach

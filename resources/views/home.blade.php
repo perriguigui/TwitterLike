@@ -42,8 +42,8 @@
                                 <p class="offset-1 date-style">{{$post->created_at}}<p>
                                     <article class="post mx-3 post-css" data-postid="{{$post->id}}">
                                         <p>{{$post->body}}</p>
-                                        <p class="d-inline">{{count($post->likes)}}</p>
-                                        <div class="interaction my-3 color_rouge">
+                                        <p class="d-inline color_rouge">{{count($post->likes)}}</p>
+                                        <div class="interaction my-3 color_rouge d-inline">
 
                                             @if (Auth::check())
 
