@@ -32,7 +32,7 @@
             <!-- Left Side Of Navbar -->
             <ul class=" offset-lg-6 offset-sm-4 offset-xm-8" >
                 @if(Auth::check())
-                    <a href="#" class=" mr-3  ">
+                    <a href="{{route("profile.show",Auth::user()->id)}}" class=" mr-3  ">
                         <img src="/uploads/avatars/{{ Auth::user()->avatar }}" width="32px" height="32px" class="rounded-circle ">
 
                     </a>
