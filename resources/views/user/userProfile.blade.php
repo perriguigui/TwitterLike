@@ -35,7 +35,7 @@
                 <div class=" card-style1 card p-4 py-4  mt-4 ">
                     <div class="post mx-3 post-css" data-postid="{{$post->id}}">
                         <div>
-                            <a href="#">
+                            <a href="{{route("profile.show",$post->user->id)}}">
                                 <img src="/uploads/avatars/{{ $post->user->avatar }}" width="50px" height="50px" class="rounded-circle photo-style1 ">
                             </a>
                             <a href="{{route("profile.show",$post->user->id)}}" class=" col-3 profilename "> {{$post->user->name}}</a>
