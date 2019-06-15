@@ -1,8 +1,23 @@
 .edit_div1{
-    width:30em;
+    width:16em;
 }
 
 .titre_style1{
     font-weight: bold;
     position: relative;
+}
+
+.avatar_upload{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    margin-right:25px;
+}
+
+.width_filebutton{
+    width:17em;
+}
+
+.edit_div2{
+    border: black;
 }

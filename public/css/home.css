@@ -187,3 +187,12 @@ p.big-name {
 }
 
 
+/*Edit, like etc*/
+.color_rouge{
+    color: #E11531;
+}
+
+.titre_style{
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/User.css">
+    <link rel="stylesheet" href="/css/edit.css">
     <link rel="icon" type="image/png" href="/image/icone.png" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>

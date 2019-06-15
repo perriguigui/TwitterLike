@@ -12,11 +12,11 @@ $('.like').on('click',function(event){
         data:{isLike: isLike, postId: postId, _token: token}
     })
         .done(function(){
-            event.target.innerHTML = isLike ? event.target.innerHTML == 'Like' ? 'You Like':'Like': event.target.innerHTML == 'Dislike'?'You dislike':'Dislike';
+            event.target.innerHTML = isLike ? event.target.innerHTML == 'Like' ? ' ':' ': event.target.innerHTML == ' '?'  ':' ';
             if(isLike){
-                event.target.nextElementSibling.innerHTML ='Dislike';
+                event.target.nextElementSibling.innerHTML =' ';
             }else{
-                event.target.previousElementSibling.innerHTML ='Like';
+                event.target.previousElementSibling.innerHTML =' ';
             }
         });
 });

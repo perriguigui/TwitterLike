@@ -32,10 +32,10 @@
 
                         @if(count($posts)>0)
                         @foreach ($posts as $post)
-                            <div class=" card-style1 card mx-auto  ">
+                            <div class=" card-style1 card mx-auto   ">
                                 <div>
                                   <a href="#">
-                                     <img src="/uploads/avatars/{{ $post->user->avatar}}" width="35px" height="35px" class="rounded-circle photo-style1 ">
+                                     <img src="/uploads/avatars/{{ $post->user->avatar}}" width="50px" height="50px" class="rounded-circle photo-style1 ">
                                   </a>
                                    <a href="{{route("profile.show",$post->user->id)}}"class=" col-3 profilename "> {{$post->user->name}}</a>
                                  </div>
@@ -43,20 +43,20 @@
                                     <article class="post mx-3 post-css" data-postid="{{$post->id}}">
                                         <p>{{$post->body}}</p>
 
-                                        <div class="interaction my-3">
+                                        <div class="interaction my-3 color_rouge">
 
                                             @if (Auth::check())
                                                 <p class="d-inline">{{count($post->likes)}}</p>
-                                                <a href="" class="like fas fa-thumbs-down">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==1 ? ' You Dislike':' Disike':' Dislike '}}</a>
-                                                <a href="" class="like fas fa-thumbs-up">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==0 ? ' You Like':' Like ':' Like '}}</a>
+                                                <a href="" class="like fas fa-thumbs-down color_rouge ml-1">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==1 ? '  ':' ':'  '}}</a>
+                                                <a href="" class="like fas fa-thumbs-up color_rouge ml-3" >{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==0 ? '  ':'  ':'  '}}</a>
 
                                             @else
                                                 <p>faut se connecter pour liker</p>
                                             @endif
 
                                             @if(Auth::user()==$post->user)
-                                                <a href="#" class="edit">Edit</a>
-                                                <a href="{{ route('post.delete', ['post_id' => $post->id]) }}">Delete</a>
+                                                <a href="#" class="edit color_rouge ml-4">Edit</a>
+                                                <a href="{{ route('post.delete', ['post_id' => $post->id]) }}" class="color_rouge">Delete</a>
                                             @endif
                                         </div>
                                     </article>

@@ -12,49 +12,48 @@
                 <div class="editfollow-style">
                     @if(Auth::user()==$user)
                         <div class="edit d-inline-block mr-4">
-                            <a href="{{route("profile.edit",$user->id)}}"style="color: #ffffff;" class="btn-hover1">Editer</a>
+                            <a href="{{route("profile.edit",$user->id)}}" class="btn-hover1 text-banner-style">Editer</a>
                         </div>
                     @endif
-                    <a href="{{ route('user.follow', $user->id )}}"style="color: #ffffff;" class="mr-4 btn-hover1">Follow User</a>
-                    <a href="{{ route('user.unfollow', $user->id )}}" style="color: #ffffff;" class="btn-hover1">Unollow User</a>
+                    <a href="{{ route('user.follow', $user->id )}}" class="mr-2 btn-hover1 text-banner-style">Follow User</a>
+                    <a href="{{ route('user.unfollow', $user->id )}}"  class="btn-hover1 text-banner-style">Unollow User</a>
                 </div>
-                <div class=" card-style1 card_city card mt-4 col-6 px-4 py-4 mx-auto " >
+
+            </div>
+
+
+
+            <div class="blog-post  ">
+                <div class=" card-style1 card_city card mt-4  col-6 p-4 py-4 mx-auto" >
                     <p class="info-css">city</p>
-                    <h4 >{{ $user->city }}</h4>
                     <p>link</p>
                     <h4 >{{ $user->link }}</h4>
                     <p>user description</p>
                     <h4 >{{ $user->description }}</h4>
                 </div>
-
-
-            </div>
-
-        </div>
-
-              <div class="blog-post">
                 @foreach ($user->posts as $post)
-                <div class=" card-style1 card mx-auto  ">
+                <div class=" card-style1 card col-7 mx-auto">
                     <div class="post mx-3 post-css" data-postid="{{$post->id}}">
                         <div>
                             <a href="#">
-                                <img src="/uploads/avatars/{{ $post->user->avatar }}" width="35px" height="35px" class="rounded-circle photo-style1 ">
+                                <img src="/uploads/avatars/{{ $post->user->avatar }}" width="50px" height="50px" class="rounded-circle photo-style1 ">
                             </a>
                             <a href="{{route("profile.show",$post->user->id)}}" class=" col-3 profilename "> {{$post->user->name}}</a>
                         </div>
-                            <h6 class="offset-1 date-style">{{$post->created_at}}</h6>
+                        <h6 class="offset-1 date-style">{{$post->created_at}}</h6>
 
                         <p>{{$post->body}}</p>
-                        <div class="interaction my-3 ">
+                        <div class="interaction my-3 color_rouge ">
                             @if (Auth::check())
-                                <a href="#" class="like fas fa-thumbs-up">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==1 ? 'You Like':'Like':'Like'}}</a>
-                                <a href="#" class="like fas fa-thumbs-down">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==0 ? 'You Dislike':'Dislike':'Dislike'}}</a>
+                                <p class="d-inline">{{count($post->likes)}}</p>
+                                <a href="#" class="like fas fa-thumbs-up color_rouge ml-1">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==1 ? '':'':''}}</a>
+                                <a href="#" class="like fas fa-thumbs-down color_rouge ml-3">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==0 ? ' ':'':''}}</a>
                             @else
                                 <p>faut se connecter pour liker</p>
                             @endif
                                 @if(Auth::user()==$post->user)
-                                    <a href="#" class="edit">Edit</a>
-                                    <a href="{{ route('post.delete', ['post_id' => $post->id]) }}">Delete</a>
+                                    <a href="#" class="edit color_rouge ml-4">Edit</a>
+                                    <a href="{{ route('post.delete', ['post_id' => $post->id]) }}" class="color_rouge">Delete</a>
                                 @endif
                         </div>
                     </div>
@@ -62,34 +61,35 @@
                 @endforeach
             </div>
 
-        <div class="modal fade" tabindex="-1" role="dialog" id="edit-modal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title">Edit Post</h4>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-group">
-                                <label for="post-body">Edit the Post</label>
-                                <textarea class="form-control" name="post-body" id="post-body" rows="5"></textarea>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" id="modal-save">Save changes</button>
-                    </div>
-                </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->
-        <script src="{{asset('/js/like.js')}}" type="text/javascript"></script>
-        <script type="text/javascript">
-            var token ='{{Session::token()}}';
-            var urlLike = '{{route('like')}}';
-            var urlEdit = '{{ route('edit') }}';
-        </script>
+            <div class="modal fade" tabindex="-1" role="dialog" id="edit-modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title">Edit Post</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="post-body">Edit the Post</label>
+                                    <textarea class="form-control" name="post-body" id="post-body" rows="5"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" id="modal-save">Save changes</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+            <script src="{{asset('/js/like.js')}}" type="text/javascript"></script>
+            <script type="text/javascript">
+                var token ='{{Session::token()}}';
+                var urlLike = '{{route('like')}}';
+                var urlEdit = '{{ route('edit') }}';
+            </script>
         </div>
+    </div>
 
     @endsection

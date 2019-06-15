@@ -12,6 +12,13 @@
         left:6em;
         top:6em;
     }
+    div.editfollow-style{
+        position: absolute;
+        left:31em;
+        top:14.5em;
+        font-size: 1.1em;
+
+    }
 
 }
 
@@ -25,6 +32,16 @@
         left:5em;
         top:4em;
     }
+    div.editfollow-style{
+        position: absolute;
+        left:34em;
+        top:6em;
+        font-size: 1em;
+    }
+
+    a.text-banner-style{
+    display: block;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -36,6 +53,16 @@
         position: absolute;
         left:5em;
         top:3em;
+    }
+    div.editfollow-style{
+        position: absolute;
+        left:31em;
+        top:5em;
+        font-size: 0.9em;
+    }
+
+    a.text-banner-style{
+        display: block;
     }
 }
 
@@ -70,9 +97,20 @@
 }
 
 .btn-hover1:hover{
-    background-color: rgba(165, 165, 165, 0.31)
+    background-color: rgba(206, 205, 214, 0.4);
+    color: white;
+
 }
+
 .btn-hover1{
     padding: 5px;
     border-radius: 15px;
+
 }
+
+.text-banner-style{
+    text-decoration:none;
+    color: white;
+}
+
+
