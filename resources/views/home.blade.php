@@ -29,9 +29,12 @@
                     <div class="blog-post">
 
 
-
                         @if(count($posts)>0)
                         @foreach ($posts as $post)
+
+                                @foreach ($post->retweets as $object)
+                                    <h3> retweeter par{{ $object->user->name }}</h3>
+                                @endforeach
                             <div class=" card-style1 card mx-auto   ">
                                 <div>
                                   <a href="{{route("profile.show",$post->user->id)}}">
@@ -42,11 +45,13 @@
                                 <p class="offset-1 date-style">{{$post->created_at}}<p>
                                     <article class="post mx-3 post-css" data-postid="{{$post->id}}">
                                         <p>{{$post->body}}</p>
-                                        <p class="d-inline color_rouge">{{count($post->likes)}}</p>
-                                        <div class="interaction my-3 color_rouge d-inline">
+                                        <p class="d-inline">{{count($post->likes)}}</p>
 
-                                            @if (Auth::check())
+                                        @if (Auth::check())
+                                        <a href="{{ route('retweet', ['user_id' => Auth::user()->id,'post_id' => $post->id]) }}" class="color_rouge">Retweet</a>
 
+
+                                        <div class="interaction my-3 color_rouge">
                                                 <a href="" class="like fas fa-thumbs-down color_rouge ml-1">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==1 ? '  ':' ':'  '}}</a>
                                                 <a href="" class="like fas fa-thumbs-up color_rouge ml-3" >{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==0 ? '  ':'  ':'  '}}</a>
 

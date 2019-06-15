@@ -72,7 +72,7 @@ class User extends Authenticatable implements Searchable
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function posts(){
-        return $this->hasMany('App\Post');
+        return $this->hasMany('App\Post')->latest();
     }
 
     /**
@@ -89,5 +89,8 @@ class User extends Authenticatable implements Searchable
     public function followings()
     {
         return $this->belongsToMany(User::class, 'followers', 'follower_id', 'leader_id')->withTimestamps();
+    }
+    public function retweets(){
+        return $this->hasMany('App\Retweet');
     }
 }

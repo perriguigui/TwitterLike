@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Post;
 use App\Like;
+use App\Retweet;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
@@ -23,6 +24,18 @@ class PostController extends Controller
                 ->from('followers')
                 ->where('follower_id', $id)->latest();
         })->orWhere('user_id', $id)->latest()->get();
+
+        $retweets = Retweet::whereIn('user_id', function($query) use($id)
+        {
+            $query->select('leader_id')
+                ->from('followers')
+                ->where('follower_id', $id)->latest();
+        })->orWhere('user_id', $id)->latest()->get();
+
+        foreach ($retweets as $retweet){
+            $postfromretweet = $retweet->post;
+            $merged = $posts->add($postfromretweet);
+        }
 
 
 
@@ -92,9 +105,13 @@ class PostController extends Controller
     public function getDeletePost($post_id)
     {
         $post = Post::where('id', $post_id)->first();
+        $like = Like::where('post_id',$post_id);
+        $retweet = Retweet::where('post_id',$post_id);
         if (Auth::user() != $post->user) {
             return redirect()->back();
         }
+        $retweet->delete();
+        $like->delete();
         $post->delete();
         return redirect()->route('home')->with(['message' => 'Successfully deleted!']);
     }
