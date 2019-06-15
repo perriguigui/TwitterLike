@@ -7,7 +7,7 @@
 
 
     <div class="row justify-content-center  mt-5 ">
-        <div class="col-md-8">
+        <div class="col-md-8 col-10">
             <div class="search-block col-sm-8 col-10 col-lg-6 mx-auto mx-lg-auto card mb-3  ">
                 <form class="search-form  mb-3 py-3"  action="{{route('search')}}" method="get">
                     <input type="text" name="search" class="ml-4 mr-3 mt-4   searchstyle-1 "  placeholder=" Search Username " value="{{ $search }}">
@@ -32,10 +32,9 @@
                         @if(count($posts)>0)
                         @foreach ($posts as $post)
 
-                                @foreach ($post->retweets as $object)
-                                    <h3> retweeter par{{ $object->user->name }}</h3>
-                                @endforeach
+
                             <div class=" card-style1 card mx-auto   ">
+
                                 <div>
                                   <a href="{{route("profile.show",$post->user->id)}}">
                                      <img src="/uploads/avatars/{{ $post->user->avatar}}" width="50px" height="50px" class="rounded-circle photo-style1 ">
@@ -45,13 +44,12 @@
                                 <p class="offset-1 date-style">{{$post->created_at}}<p>
                                     <article class="post mx-3 post-css" data-postid="{{$post->id}}">
                                         <p>{{$post->body}}</p>
-                                        <p class="d-inline">{{count($post->likes)}}</p>
+                                        <p class="d-inline color_rouge">{{count($post->likes)}}</p>
 
                                         @if (Auth::check())
-                                        <a href="{{ route('retweet', ['user_id' => Auth::user()->id,'post_id' => $post->id]) }}" class="color_rouge">Retweet</a>
 
 
-                                        <div class="interaction my-3 color_rouge">
+                                        <div class="interaction my-3 color_rouge d-inline">
                                                 <a href="" class="like fas fa-thumbs-down color_rouge ml-1">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==1 ? '  ':' ':'  '}}</a>
                                                 <a href="" class="like fas fa-thumbs-up color_rouge ml-3" >{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==0 ? '  ':'  ':'  '}}</a>
 
@@ -60,9 +58,14 @@
                                             @endif
 
                                             @if(Auth::user()==$post->user)
+                                                <a href="{{ route('retweet', ['user_id' => Auth::user()->id,'post_id' => $post->id]) }}" class="fas fa-retweet color_rouge">Retweet</a>
                                                 <a href="#" class="edit color_rouge ml-4">Edit</a>
                                                 <a href="{{ route('post.delete', ['post_id' => $post->id]) }}" class="color_rouge">Delete</a>
                                             @endif
+                                            @foreach ($post->retweets as $object)
+                                                <p class="d-inline retweet_name-style "> Retweeter par {{ $object->user->name }}</p>
+                                            @endforeach
+
                                         </div>
                                     </article>
                             </div>
