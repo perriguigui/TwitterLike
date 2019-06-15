@@ -29,9 +29,12 @@
                     <div class="blog-post">
 
 
-                        @if(count($merged)>0)
-                        @foreach ($merged as $post)
-                            {{$post->retweet}}
+                        @if(count($posts)>0)
+                        @foreach ($posts as $post)
+
+                                @foreach ($post->retweets as $object)
+                                    <h3> retweeter par{{ $object->user->name }}</h3>
+                                @endforeach
                             <div class=" card-style1 card mx-auto   ">
                                 <div>
                                   <a href="{{route("profile.show",$post->user->id)}}">

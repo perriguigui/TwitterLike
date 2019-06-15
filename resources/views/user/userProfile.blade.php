@@ -43,6 +43,7 @@
                         <h6 class="offset-1 date-style">{{$post->created_at}}</h6>
 
                         <p>{{$post->body}}</p>
+                        <a href="{{ route('retweet', ['user_id' => Auth::user()->id,'post_id' => $post->id]) }}" class="color_rouge">Retweet</a>
                         <div class="interaction my-3 color_rouge ">
                             @if (Auth::check())
                                 <p class="d-inline">{{count($post->likes)}}</p>

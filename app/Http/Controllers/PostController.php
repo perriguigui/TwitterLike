@@ -39,7 +39,7 @@ class PostController extends Controller
 
 
 
-        return view('home',compact('merged','search'));
+        return view('home',compact('posts','search'));
     }
 
     public function likePost(Request $request){
@@ -105,9 +105,13 @@ class PostController extends Controller
     public function getDeletePost($post_id)
     {
         $post = Post::where('id', $post_id)->first();
+        $like = Like::where('post_id',$post_id);
+        $retweet = Retweet::where('post_id',$post_id);
         if (Auth::user() != $post->user) {
             return redirect()->back();
         }
+        $retweet->delete();
+        $like->delete();
         $post->delete();
         return redirect()->route('home')->with(['message' => 'Successfully deleted!']);
     }

@@ -15,7 +15,11 @@ class RetweetController extends Controller
         $Retweets->user_id = $request['user_id'];
         $Retweets->post_id = $request['post_id'];
         $Retweets->retweet = 0;
-        $Retweets->save();
+        $verif = Retweet::where('user_id', $request['user_id'])->where('post_id', $request['post_id']) ->first();
+        if ($verif === null) {
+            $Retweets->save();
+        }
+
         return redirect()->back();
     }
 }
