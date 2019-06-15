@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3421734c-c1fd-4054-8687-039bf972d2a6" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/public/css/User.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/User.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/user/userProfile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/userProfile.blade.php" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
+>>>>>>> e28b87838b4500fa631d08f85747ca8d6b744407
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,6 +19,7 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
+<<<<<<< HEAD
   <component name="DockManager">
     <window id="1">
       <content type="file-editors">
@@ -51,27 +57,42 @@
       </content>
     </window>
   </component>
+=======
+>>>>>>> e28b87838b4500fa631d08f85747ca8d6b744407
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/css/User.css">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="238">
               <caret line="59" column="16" lean-forward="true" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+=======
+            <state relative-caret-position="1122">
+              <caret line="66" column="1" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
+>>>>>>> e28b87838b4500fa631d08f85747ca8d6b744407
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/public/css/login.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
               <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+=======
+        <entry file="file://$PROJECT_DIR$/public/js/like.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="86" lean-forward="true" selection-start-line="14" selection-start-column="86" selection-end-line="14" selection-end-column="86" />
+>>>>>>> e28b87838b4500fa631d08f85747ca8d6b744407
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/resources/views/user/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="969">
@@ -85,6 +106,12 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
               <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+=======
+        <entry file="file://$PROJECT_DIR$/public/css/login.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+>>>>>>> e28b87838b4500fa631d08f85747ca8d6b744407
             </state>
           </provider>
         </entry>
@@ -97,15 +124,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="255">
               <caret line="21" column="41" lean-forward="true" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
               <folding>
                 <element signature="e#1048#1069#0#HTML" expanded="true" />
               </folding>
+=======
+            <state relative-caret-position="816">
+              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+>>>>>>> e28b87838b4500fa631d08f85747ca8d6b744407
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/layout.blade.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -114,6 +147,13 @@
               <folding>
                 <element signature="n#style#0;n#a#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/user/userProfile.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="37" column="78" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="78" />
+>>>>>>> e28b87838b4500fa631d08f85747ca8d6b744407
             </state>
           </provider>
         </entry>
@@ -121,6 +161,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/home.css">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="2482">
               <caret line="146" column="4" selection-start-line="146" selection-start-column="4" selection-end-line="146" selection-end-column="4" />
             </state>
@@ -141,6 +182,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="547">
               <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+=======
+            <state relative-caret-position="493">
+              <caret line="38" column="22" lean-forward="true" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+>>>>>>> e28b87838b4500fa631d08f85747ca8d6b744407
             </state>
           </provider>
         </entry>
@@ -191,7 +236,6 @@
         <option value="$PROJECT_DIR$/resources/views/post/post.blade.php" />
         <option value="$PROJECT_DIR$/public/js/Editpost.js" />
         <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/PostController.php" />
         <option value="$PROJECT_DIR$/public/css/welcome.css" />
         <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
@@ -200,17 +244,28 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/public/js/like.js" />
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
+=======
+        <option value="$PROJECT_DIR$/public/css/User.css" />
+>>>>>>> e28b87838b4500fa631d08f85747ca8d6b744407
         <option value="$PROJECT_DIR$/public/css/home.css" />
         <option value="$PROJECT_DIR$/resources/views/post/search.blade.php" />
         <option value="$PROJECT_DIR$/public/css/dit.css" />
-        <option value="$PROJECT_DIR$/resources/views/layout.blade.php" />
         <option value="$PROJECT_DIR$/public/css/login.css" />
         <option value="$PROJECT_DIR$/public/css/edit.css" />
         <option value="$PROJECT_DIR$/resources/views/user/edit.blade.php" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/resources/views/user/userProfile.blade.php" />
         <option value="$PROJECT_DIR$/public/css/User.css" />
+=======
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/public/js/like.js" />
+        <option value="$PROJECT_DIR$/resources/views/user/userProfile.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layout.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
+>>>>>>> e28b87838b4500fa631d08f85747ca8d6b744407
       </list>
     </option>
   </component>
@@ -220,71 +275,22 @@
   <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
       <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
-      <path value="$PROJECT_DIR$/vendor/filp/whoops" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
       <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
-      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
-      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
-      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
-      <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
-      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
       <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
       <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
       <path value="$PROJECT_DIR$/vendor/composer" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
-      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
-      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
-      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
-      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
-      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
-      <path value="$PROJECT_DIR$/vendor/opis/closure" />
-      <path value="$PROJECT_DIR$/vendor/beyondcode/laravel-dump-server" />
-      <path value="$PROJECT_DIR$/vendor/psr/container" />
       <path value="$PROJECT_DIR$/vendor/psr/log" />
-      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
-      <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
-      <path value="$PROJECT_DIR$/vendor/laravel/framework" />
-      <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
       <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
-      <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
-      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
       <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
-      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
-      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
-      <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
       <path value="$PROJECT_DIR$/vendor/erusev/parsedown" />
-      <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
-      <path value="$PROJECT_DIR$/vendor/league/flysystem" />
-      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
-      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
-      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
-      <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
-      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
       <path value="$PROJECT_DIR$/vendor/symfony/console" />
-      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-highlighter" />
       <path value="$PROJECT_DIR$/vendor/symfony/process" />
-      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-color" />
       <path value="$PROJECT_DIR$/vendor/symfony/debug" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
       <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
-      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
       <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
       <path value="$PROJECT_DIR$/vendor/symfony/contracts" />
@@ -293,20 +299,74 @@
       <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
       <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
-      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
-      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
       <path value="$PROJECT_DIR$/vendor/psr/http-message" />
-      <path value="$PROJECT_DIR$/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-highlighter" />
+      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-color" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/vendor/filp/whoops" />
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-searchable" />
+      <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/beyondcode/laravel-dump-server" />
+      <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+<<<<<<< HEAD
     <option name="x" value="609" />
     <option name="y" value="-20" />
+=======
+    <option name="x" value="392" />
+    <option name="y" value="-18" />
+>>>>>>> e28b87838b4500fa631d08f85747ca8d6b744407
     <option name="width" value="974" />
     <option name="height" value="746" />
   </component>
@@ -316,102 +376,58 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
             <path>
               <item name="TwitterLike" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\BUREAU\DUTInfo\PHP\hatweet3\TwitterLike" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
             <path>
               <item name="TwitterLike" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\BUREAU\DUTInfo\PHP\hatweet3\TwitterLike" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="TwitterLike" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\BUREAU\DUTInfo\PHP\hatweet3\TwitterLike" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Http" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="TwitterLike" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\BUREAU\DUTInfo\PHP\hatweet3\TwitterLike" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Http" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Controllers" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="TwitterLike" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\BUREAU\DUTInfo\PHP\hatweet3\TwitterLike" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="app" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Http" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Controllers" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Auth" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="TwitterLike" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\BUREAU\DUTInfo\PHP\hatweet3\TwitterLike" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="public" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="TwitterLike" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\BUREAU\DUTInfo\PHP\hatweet3\TwitterLike" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="public" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="css" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="TwitterLike" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\BUREAU\DUTInfo\PHP\hatweet3\TwitterLike" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="public" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="image" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="TwitterLike" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\BUREAU\DUTInfo\PHP\hatweet3\TwitterLike" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="public" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="TwitterLike" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\BUREAU\DUTInfo\PHP\hatweet3\TwitterLike" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="public" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="uploads" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="TwitterLike" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\BUREAU\DUTInfo\PHP\hatweet3\TwitterLike" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="TwitterLike" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\BUREAU\DUTInfo\PHP\hatweet3\TwitterLike" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="js" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="TwitterLike" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\BUREAU\DUTInfo\PHP\hatweet3\TwitterLike" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="TwitterLike" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\BUREAU\DUTInfo\PHP\hatweet3\TwitterLike" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="auth" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="TwitterLike" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\BUREAU\DUTInfo\PHP\hatweet3\TwitterLike" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="post" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="TwitterLike" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="D:\BUREAU\DUTInfo\PHP\hatweet3\TwitterLike" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="views" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="user" type="9f88c78c:ScopeViewTreeModel$FileNode" />
@@ -420,7 +436,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -433,12 +448,13 @@
     <property name="nodejs_package_manager_path" value="yarn" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\anto\Documents\ProjetPhp\TwitterLike" />
-      <recent name="C:\Users\tompe\Documents\phpTwitter\TwitterLike\resources\views" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\tompe\Documents\phpTwitter\TwitterLike\public\js" />
+      <recent name="C:\Users\tompe\Documents\phpTwitter\TwitterLike\resources\views" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tompe\Documents\phpTwitter\TwitterLike" />
+      <recent name="C:\Users\anto\Documents\ProjetPhp\TwitterLike" />
       <recent name="C:\Users\tompe\Documents\phpTwitter\TwitterLike\resources\views" />
     </key>
   </component>
@@ -492,7 +508,12 @@
       <workItem from="1560425741294" duration="1634000" />
       <workItem from="1560437384885" duration="11471000" />
       <workItem from="1560505516132" duration="2699000" />
+<<<<<<< HEAD
       <workItem from="1560589114398" duration="5799000" />
+=======
+      <workItem from="1560590822780" duration="351000" />
+      <workItem from="1560591223761" duration="3081000" />
+>>>>>>> e28b87838b4500fa631d08f85747ca8d6b744407
     </task>
     <task id="LOCAL-00001" summary="test commit from php storm">
       <created>1557433513784</created>
@@ -540,13 +561,21 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="190885000" />
+=======
+    <option name="totallyTimeSpent" value="188518000" />
+>>>>>>> e28b87838b4500fa631d08f85747ca8d6b744407
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09914712" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10127932" />
+>>>>>>> e28b87838b4500fa631d08f85747ca8d6b744407
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -679,13 +708,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../hatweet2/TwitterLike/resources/views/home.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../hatweet2/TwitterLike/resources/views/home.blade.php" />
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/HasRelationships.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -730,9 +753,7 @@
     <entry file="file://$PROJECT_DIR$/public/uploads/avatars/1557437319.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/uploads/avatars/1559683376.gif">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public/uploads/avatars/1559683376.gif" />
     <entry file="file://$PROJECT_DIR$/public/uploads/avatars/user.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -774,14 +795,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/layout.css" />
-    <entry file="file://$PROJECT_DIR$/resources/views/post/post.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret column="18" selection-start-column="18" selection-end-column="18" />
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Like.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -789,15 +802,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/post/search.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/Retweet.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+=======
+    <entry file="file://$PROJECT_DIR$/public/css/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2482">
+          <caret line="146" column="4" selection-start-line="146" selection-start-column="4" selection-end-line="146" selection-end-column="4" />
+>>>>>>> e28b87838b4500fa631d08f85747ca8d6b744407
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="176">
           <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
         </state>
@@ -814,13 +842,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+=======
+        <state relative-caret-position="221">
+          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/post/search.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/css/edit.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+        <state relative-caret-position="374">
+          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/user/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="841">
+          <caret line="61" column="10" selection-start-line="61" selection-start-column="10" selection-end-line="61" selection-end-column="10" />
+>>>>>>> e28b87838b4500fa631d08f85747ca8d6b744407
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Retweet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -831,6 +877,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/resources/views/layout.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-238">
@@ -852,11 +899,39 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="547">
           <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+=======
+    <entry file="file://$PROJECT_DIR$/public/js/like.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="86" lean-forward="true" selection-start-line="14" selection-start-column="86" selection-end-line="14" selection-end-column="86" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/home.css">
+    <entry file="file://$PROJECT_DIR$/public/css/User.css">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="66" column="1" selection-start-line="66" selection-start-column="1" selection-end-line="66" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layout.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="38" column="22" lean-forward="true" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/post/post.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="41" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="41" />
+>>>>>>> e28b87838b4500fa631d08f85747ca8d6b744407
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="2482">
           <caret line="146" column="4" selection-start-line="146" selection-start-column="4" selection-end-line="146" selection-end-column="4" />
         </state>
@@ -893,6 +968,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="59" column="16" lean-forward="true" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+=======
+        <state relative-caret-position="340">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/user/userProfile.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="37" column="78" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="78" />
+>>>>>>> e28b87838b4500fa631d08f85747ca8d6b744407
         </state>
       </provider>
     </entry>
