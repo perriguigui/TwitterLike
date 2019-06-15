@@ -23,8 +23,8 @@
 
 
 
-            <div class="blog-post  ">
-                <div class=" card-style1 card_city card mt-4  col-6 p-4 py-4 mx-auto" >
+            <div class="blog-post mx-auto mt-4 col-8">
+                <div class=" card-style1 card p-4 py-4" >
                     <p class="info-css">city</p>
                     <p>link</p>
                     <h4 >{{ $user->link }}</h4>
@@ -32,7 +32,7 @@
                     <h4 >{{ $user->description }}</h4>
                 </div>
                 @foreach ($user->posts as $post)
-                <div class=" card-style1 card col-7 mx-auto">
+                <div class=" card-style1 card p-4 py-4  mt-4 ">
                     <div class="post mx-3 post-css" data-postid="{{$post->id}}">
                         <div>
                             <a href="{{route("profile.show",$post->user->id)}}">

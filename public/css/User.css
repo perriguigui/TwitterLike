@@ -4,7 +4,9 @@
 
 @media only screen and (max-width: 1200px) and (min-width: 992px) {
     img.avatar_style {
-        top: 7em;
+        position: absolute;
+        top: 9em;
+        width:120px;
     }
 
     h2.profil-name{
@@ -24,8 +26,9 @@
 
 @media only screen and (max-width: 991px) and (min-width: 768px) {
     img.avatar_style {
-        top: 4em;
-        width:150px;
+        position: absolute;
+        top: 6em;
+        width:100px;
     }
     h2.profil-name{
         position: absolute;
@@ -46,8 +49,10 @@
 
 @media only screen and (max-width: 768px) {
     img.avatar_style {
-        top: 3em;
-        width:120px;
+        position: absolute;
+        top: 5em;
+        left:3em;
+        width:85px;
     }
     h2.profil-name{
         position: absolute;
@@ -68,12 +73,12 @@
 
 .avatar_style{
     position: absolute;
-    top:9em;
-    width:180px;
-    float:left;
+    top:12em;
+    left:2em;
+    width:130px;
     border-radius:50%;
     border-color: white;
-    margin-right:25px;
+
 }
 
 .profil-name{
