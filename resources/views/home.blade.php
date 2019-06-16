@@ -22,47 +22,52 @@
                     <input type="hidden" value="{{ Session::token() }}" name="_token">
                 </form>
             </div>
-                    <div class="blog-post">
+                <div class="blog-post mx-auto mt-4 col d-inline">
 
-                        @if(count($posts)>0)
-                        @foreach ($posts as $post)
-                            <div class=" card-style1 card mx-auto ">
-                                <div>
-                                  <a href="{{route("profile.show",$post->user->id)}}" >
-                                     <img src="/uploads/avatars/{{ $post->user->avatar}}" width="50px" height="50px" class="rounded-circle photo-style1 ">
-                                  </a>
-                                   <a href="{{route("profile.show",$post->user->id)}}"class=" col-3 profilename "> {{$post->user->name}}</a>
-                                 </div>
-                                <p class="offset-1 date-style">{{$post->created_at}}<p>
-                                    <article class="post mx-3 post-css" data-postid="{{$post->id}}">
-                                        <p>{{$post->body}}</p>
-                                        <p class="d-inline color_rouge">{{$post->likes->where('like',1)->count()}}</p>
-                                        @if (Auth::check())
-                                        <div class="interaction my-3 color_rouge d-inline">
-                                                <a href="" class="like fas fa-thumbs-down color_rouge ml-1">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==1 ? 'You dont like':'Dislike':'Dislike'}}</a>
-                                                <a href="" class="like fas fa-thumbs-up color_rouge ml-3" >{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==0 ? 'You like':'Like':'Like'}}</a>
-                                            @else
-                                                <p>faut se connecter pour liker</p>
-                                            @endif
-                                            <p class="d-inline color_rouge ml-2">{{$post->retweetsFromPost->count()}}</p>
-                                            <div class="dropdown">
-                                                <a href="{{ route('retweet', ['user_id' => Auth::user()->id,'post_id' => $post->id]) }}" class="color_rouge">Retweet</a>
-                                                <div class="dropdown-content">
-                                                    <p style="color: #E11531;">Retweet by :</p>
-                                                    @foreach ($post->retweetsFromPost as $object)
-                                                        <p class="retweet_name-style "> {{ $object->user->name}}</p>
-                                                    @endforeach
-                                                </div>
-                                            </div>
-                                            @if(Auth::user()==$post->user)
-                                                <a href="#" class="edit color_rouge ml-4">Edit</a>
-                                                <a href="{{ route('post.delete', ['post_id' => $post->id]) }}" class="color_rouge">Delete</a>
-                                            @endif
+                    <h1 style="color: #D62C10">Mes tweets :</h1>
+                    @if(count($posts)>0)
+                    @foreach ($posts as $post)
+                        <div class=" card-style1 card p-4 py-4  mt-4 ">
+                            <div class="post mx-3 post-css" data-postid="{{$post->id}}">
+                                <a href="{{route("profile.show",$post->user->id)}}">
+                                    <img src="/uploads/avatars/{{ $post->user->avatar }}" width="50px" height="50px" class="rounded-circle photo-style1 ">
+                                </a>
+                                <a href="{{route("profile.show",$post->user->id)}}" class=" col-3 profilename "> {{$post->user->name}}</a>
+                                <h6 class="offset-1 date-style">{{$post->created_at}}</h6>
+
+                                <p>{{$post->body}}</p>
+
+                                <p class="d-inline color_rouge ml-2">{{$post->likes->where('like',1)->count()}}</p>
+                                <div class="interaction my-3 color_rouge d-inline ">
+                                    @if (Auth::check())
+
+                                        <a href="" class="like fas fa-thumbs-down color_rouge ml-1">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==1 ? 'You dont like':'Dislike':'Dislike'}}</a>
+
+                                        <a href="" class="like fas fa-thumbs-up color_rouge ml-1" >{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==0 ? 'You like':'Like':'Like'}}</a>
+                                    @else
+                                        <p>faut se connecter pour liker</p>
+                                    @endif
+                                    <p class="d-inline color_rouge ml-2">{{$post->retweetsFromPost->count()}}</p>
+                                    <i class=" fas fa-retweet ml-2"></i>
+                                    <div class="dropdown">
+                                        <a href="{{ route('retweet', ['user_id' => Auth::user()->id,'post_id' => $post->id]) }}" class="color_rouge ">Retweet</a>
+                                        <div class="dropdown-content">
+                                            <p style="color: #E11531;">Retweet by :</p>
+                                            @foreach ($post->retweetsFromPost as $object)
+                                                <p class="retweet_name-style "> {{ $object->user->name}}</p>
+                                            @endforeach
                                         </div>
-                                    </article>
-                            </div>
+                                    </div>
+                                    @if(Auth::user()==$post->user)
+                                        <a href="#" class="edit color_rouge ml-4">Edit</a>
+                                        <a href="{{ route('post.delete', ['post_id' => $post->id]) }}" class="color_rouge">Delete</a>
+                                    @endif
+                                </div>
 
-                        @endforeach
+                            </div>
+                        </div>
+
+                    @endforeach
                         @else
                             <h3 style="text-align: center;color:#343434;">C'est ici que tu pourras suivre les tweets des personnes suivi. Mais pour cela il faut d'abord en suivre. Tu peux ainsi en rechercher dans la bar de recherche situé ci-dessus</h3>
                         @endif
