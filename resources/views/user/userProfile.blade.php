@@ -112,7 +112,7 @@
                                     <a href="{{ route('retweet', ['user_id' => Auth::user()->id,'post_id' => $retweets->post->id]) }}" class="color_rouge ">Retweet</a>
                                     <div class="dropdown-content">
                                             <p style="color: #E11531;">Retweet by :</p>
-                                            @foreach ($post->retweetsFromPost as $object)
+                                            @foreach ($retweets->post->retweetsFromPost as $object)
                                                 <p class="retweet_name-style "> {{ $object->user->name}}</p>
                                             @endforeach
                                         </div>
