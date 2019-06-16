@@ -47,17 +47,18 @@
                     <h6 class="offset-1 date-style">{{$post->created_at}}</h6>
 
                     <p>{{$post->body}}</p>
-                    <p class="d-inline color_rouge">{{$post->likes->where('like',2)->count()}}</p>
+
+                    <p class="d-inline color_rouge ml-2">{{$post->likes->where('like',1)->count()}}</p>
                     <div class="interaction my-3 color_rouge d-inline ">
                         @if (Auth::check())
 
-                            <a href="" class="like fas fa-thumbs-down color_rouge ">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==1 ? 'You dont like':'Dislike':'Dislike'}}</a>
+                            <a href="" class="like fas fa-thumbs-down color_rouge ml-1">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==1 ? 'You dont like':'Dislike':'Dislike'}}</a>
 
-                            <a href="" class="like fas fa-thumbs-up color_rouge " >{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==0 ? 'You like':'Like':'Like'}}</a>
+                            <a href="" class="like fas fa-thumbs-up color_rouge ml-1" >{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==0 ? 'You like':'Like':'Like'}}</a>
                         @else
                             <p>faut se connecter pour liker</p>
                         @endif
-                        <p class="d-inline color_rouge ml-2">{{$post->retweetsCount->count()}}</p>
+                            <p class="d-inline color_rouge ml-2">{{$post->retweetsCount->count()}}</p>
                         <i class=" fas fa-retweet ml-2"></i>
                         <a href="{{ route('retweet', ['user_id' => Auth::user()->id,'post_id' => $post->id]) }}" class="color_rouge ">Retweet</a>
                         @if(Auth::user()==$post->user)
