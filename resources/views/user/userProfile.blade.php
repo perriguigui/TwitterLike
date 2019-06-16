@@ -58,7 +58,7 @@
                         @else
                             <p>faut se connecter pour liker</p>
                         @endif
-                            <p class="d-inline color_rouge ml-2">{{$post->retweetsCount->count()}}</p>
+                            <p class="d-inline color_rouge ml-2">{{$post->retweetsFromPost->count()}}</p>
                         <i class=" fas fa-retweet ml-2"></i>
                         <a href="{{ route('retweet', ['user_id' => Auth::user()->id,'post_id' => $post->id]) }}" class="color_rouge ">Retweet</a>
                         @if(Auth::user()==$post->user)
