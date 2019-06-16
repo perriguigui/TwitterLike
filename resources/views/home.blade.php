@@ -10,7 +10,7 @@
         <div class="col-md-8 col-10">
             <div class="search-block col-sm-8 col-10 col-lg-6 mx-auto mx-lg-auto card mb-3  ">
                 <form class="search-form  mb-3 py-3"  action="{{route('search')}}" method="get">
-                    <input type="text" name="search" class="ml-4 mr-3 mt-4   searchstyle-1 "  placeholder=" Search Username " value="{{ $search }}">
+                    <input type="text" name="search" class="ml-4 mr-3 mt-4   searchstyle-1 " placeholder=" Search Username " value="{{ $search }}">
                     <button type="submit" class="btn-css"><i class="fas fa-search search-icon "></i></button>
                 </form>
 

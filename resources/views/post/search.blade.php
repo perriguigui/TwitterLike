@@ -4,13 +4,13 @@
     <link rel="icon" type="image/png" href="image/icone.png" />
     <div >
         <div class=" search-block col-lg-4 col-md-5 col-sm-7 card mb-5  ">
-            <form class="search-form  mb-3 py-3" action="{{route('search')}}" method="get">
-                <input type="text" name="search" class="ml-4 mr-3 mt-4   searchstyle-1" placeholder="Search Username" value="{{ $search }}">
+            <form class="search-form  mb-3 py-3" style="   z-index: 99;"action="{{route('search')}}" method="get">
+                <input type="text" name="search" class="ml-4 mr-3 mt-4   searchstyle-1"  placeholder="Search Username" value="{{ $search }}">
                 <button type="submit" class="btn-css"><i class="fas fa-search search-icon "></i></button>
             </form>
         </div>
         <ul id="users" >
-            <h1 class="color_rouge  col-2 mb-4">Users</h1>
+            <h1 class="color_rouge  col-2 mb-4"  >Users</h1>
             @foreach($users as $user)
                 <div class=" card card-style1 col-2 d-inline-block">
                  <li class="user-search-item"><a href="{{route('profile.show',$user->id)}}">{{$user->name}}</a></li>
