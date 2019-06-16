@@ -66,6 +66,7 @@
             @endif
         </ul>
         </div>
+    *
     <script src="{{asset('/js/like.js')}}" type="text/javascript"></script>
     <script type="text/javascript">
         var token ='{{Session::token()}}';
