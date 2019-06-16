@@ -31,9 +31,13 @@ class Post extends Model implements Searchable
     public function likes(){
         return $this->hasMany('App\Like');
     }
+
     public function retweets(){
         return $this->hasMany('App\Retweet')->where('user_id', $this->user_id);
     }
 
+    public function retweetsCount(){
+        return $this->hasMany('App\Retweet');
+    }
 
 }

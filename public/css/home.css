@@ -117,8 +117,9 @@ p.big-name {
     color: #1d1d1d;
     display: inline;
     font-size: medium;
-
-
+}
+.profilename:hover{
+    text-decoration: none;
 }
 .post-css{
     color: #000000;
@@ -194,6 +195,9 @@ p.big-name {
     margin-top: 10px;
     margin-left: 10px;
 }
+.photo-style1:hover{
+    text-decoration: none;
+}
 
 
 
@@ -206,6 +210,12 @@ p.big-name {
 
 /*Edit, like etc*/
 .color_rouge{
+    text-decoration: none;
+    color: #E11531;
+    font-weight: normal;
+}
+.color_rouge:hover{
+    text-decoration: none;
     color: #E11531;
 }
 
@@ -218,4 +228,11 @@ p.big-name {
     color: #8b0c1c;
     position: relative;
     right: -10em;
+}
+
+.notextdeco{
+    text-decoration: none;
+}
+.notextdeco:hover{
+    text-decoration: none;
 }

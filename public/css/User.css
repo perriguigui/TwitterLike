@@ -50,19 +50,19 @@
 @media only screen and (max-width: 768px) {
     img.avatar_style {
         position: absolute;
-        top: 5em;
-        left:3em;
+        top: 3em;
+        left:2em;
         width:85px;
     }
     h2.profil-name{
         position: absolute;
-        left:5em;
-        top:3em;
+        left:4em;
+        top:2em;
     }
     div.editfollow-style{
         position: absolute;
-        left:31em;
-        top:5em;
+        left:25em;
+        top:3em;
         font-size: 0.9em;
     }
 
@@ -116,6 +116,10 @@
 }
 
 .text-banner-style{
+    text-decoration:none;
+    color: white;
+}
+.text-banner-style:hover{
     text-decoration:none;
     color: white;
 }

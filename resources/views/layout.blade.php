@@ -23,14 +23,15 @@
 
     <div id="app " >
         <nav class="navbar navbar-expand-md navbar-light border-danger navbar-fixed-top container-fluid " >
+            <!-- Left Side Of Navbar -->
                 <a class=" offset-xm-1 offset-lg-1 offset-sm-0 navbar-brand" href="{{route('home')}}" style="position: relative; bottom: 6px;">
                     <img src="/image/icone.png" width="40" height="30" class=" d-inline-block " alt="" >
                     Hatweet
                 </a>
 
 
-            <!-- Left Side Of Navbar -->
-            <ul class=" offset-lg-6 offset-sm-4 offset-xm-8" >
+            <!-- Right Side Of Navbar -->
+            <ul class=" offset-lg-6 offset-sm-4 offset-md-8 offset-xm-8" >
                 @if(Auth::check())
                     <a href="{{route("profile.show",Auth::user()->id)}}" class=" mr-3  ">
                         <img src="/uploads/avatars/{{ Auth::user()->avatar }}" width="32px" height="32px" class="rounded-circle ">
@@ -59,12 +60,11 @@
 
                                 @endif
                             @else
-                                    <a >
-                                   <!--   id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre-->
+                                    <a class="ml-sm-4 ml-md-0" >
                                 {{ Auth::user()->name }}
                                 </a>
                                 <li class="nav-item dropdown"  >
-                                    <div> <!--class="dropdown-menu dropdown-menu-right"> aria-labelledby="navbarDropdown">-->
+                                    <div>
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                            onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">

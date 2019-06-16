@@ -33,10 +33,10 @@
                         @foreach ($posts as $post)
 
 
-                            <div class=" card-style1 card mx-auto   ">
+                            <div class=" card-style1 card mx-auto ">
 
                                 <div>
-                                  <a href="{{route("profile.show",$post->user->id)}}">
+                                  <a href="{{route("profile.show",$post->user->id)}}" >
                                      <img src="/uploads/avatars/{{ $post->user->avatar}}" width="50px" height="50px" class="rounded-circle photo-style1 ">
                                   </a>
                                    <a href="{{route("profile.show",$post->user->id)}}"class=" col-3 profilename "> {{$post->user->name}}</a>
@@ -56,7 +56,8 @@
                                             @else
                                                 <p>faut se connecter pour liker</p>
                                             @endif
-                                            <a href="{{ route('retweet', ['user_id' => Auth::user()->id,'post_id' => $post->id]) }}" class="fas fa-retweet color_rouge">Retweet</a>
+                                            <p class="d-inline color_rouge ml-2">{{$post->retweetsCount->count()}}</p>
+                                            <a href="{{ route('retweet', ['user_id' => Auth::user()->id,'post_id' => $post->id]) }}" class="color_rouge">Retweet</a>
                                             @if(Auth::user()==$post->user)
                                                 <a href="#" class="edit color_rouge ml-4">Edit</a>
                                                 <a href="{{ route('post.delete', ['post_id' => $post->id]) }}" class="color_rouge">Delete</a>
