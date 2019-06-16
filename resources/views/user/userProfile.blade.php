@@ -12,11 +12,11 @@
                 <div class="editfollow-style">
                     @if(Auth::user()==$user)
                         <div class="edit d-inline-block mr-4">
-                            <a href="{{route("profile.edit",$user->id)}}" class="btn-hover1 text-banner-style">Editer</a>
+                            <a href="{{route("profile.edit",$user->id)}}" class="btn-hover1 text-banner-style">Edit</a>
                         </div>
                     @endif
                     <a href="{{ route('user.follow', $user->id )}}" class="mr-2 btn-hover1 text-banner-style">Follow User</a>
-                    <a href="{{ route('user.unfollow', $user->id )}}"  class="btn-hover1 text-banner-style">Unollow User</a>
+                    <a href="{{ route('user.unfollow', $user->id )}}"  class="btn-hover1 text-banner-style">Unfollow User</a>
                 </div>
 
             </div>
@@ -50,8 +50,8 @@
                     <p class="d-inline color_rouge">{{count($post->likes)}}</p>
                     <div class="interaction my-3 color_rouge d-inline ">
                         @if (Auth::check())
-                            <a href="#" class="like fas fa-thumbs-up color_rouge ml-1">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==1 ? '':'':''}}</a>
-                            <a href="#" class="like fas fa-thumbs-down color_rouge ml-3">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==0 ? ' ':'':''}}</a>
+                            <a href="#" class="like fas fa-thumbs-up color_rouge ml-1">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==1 ? 'You like':'':''}}</a>
+                            <a href="#" class="like fas fa-thumbs-down color_rouge ml-3">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==0 ? 'You dont like':'':''}}</a>
                         @else
                             <p>faut se connecter pour liker</p>
                         @endif
@@ -85,8 +85,8 @@
                         <p class="d-inline color_rouge">{{count($retweets->post->likes)}}</p>
                         <div class="interaction my-3 color_rouge d-inline">
                             @if (Auth::check())
-                                <a href="#" class="like fas fa-thumbs-up color_rouge ml-1">{{Auth::user()->likes()->where('post_id',$retweets->post->id)->first() ? Auth::user()->likes()->where('post_id',$retweets->post->id)->first()->like==1 ? '':'':''}}</a>
-                                <a href="#" class="like fas fa-thumbs-down color_rouge ml-3">{{Auth::user()->likes()->where('post_id',$retweets->post->id)->first() ? Auth::user()->likes()->where('post_id',$retweets->id)->first()->like==0 ? ' ':'':''}}</a>
+                                <a href="#" class="like fas fa-thumbs-up color_rouge ml-1">{{Auth::user()->likes()->where('post_id',$retweets->post->id)->first() ? Auth::user()->likes()->where('post_id',$retweets->post->id)->first()->like==1 ? 'You like':'':''}}</a>
+                                <a href="#" class="like fas fa-thumbs-down color_rouge ml-3">{{Auth::user()->likes()->where('post_id',$retweets->post->id)->first() ? Auth::user()->likes()->where('post_id',$retweets->post->id)->first()->like==0 ? 'You dont like':'':''}}</a>
                             @else
                                 <p>faut se connecter pour liker</p>
                             @endif

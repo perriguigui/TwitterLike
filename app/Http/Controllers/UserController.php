@@ -46,7 +46,7 @@ class UserController extends Controller
         if($request->hasFile('avatar')){
             $avatar = $request->file('avatar');
             $filename = time() . '.' . $avatar->getClientOriginalExtension();
-            Image::make($avatar)->resize(300, 300)->save( public_path('/uploads/avatars/' . $filename ) );
+            Image::make($avatar)->crop(600, 600)->resize(600, 600)->save( public_path('/uploads/avatars/' . $filename ) );
             $user = Auth::user();
             $user->avatar = $filename;
             $user->save();
@@ -55,7 +55,7 @@ class UserController extends Controller
         if($request->hasFile('banner')){
             $banner = $request->file('banner');
             $filename = time() . '.' . $banner->getClientOriginalExtension();
-            Image::make($banner)->crop(1800, 600)->save( public_path('/uploads/banners/' . $filename ) );
+            Image::make($banner)->crop(1800, 600)->resize(1800, 600)->save( public_path('/uploads/banners/' . $filename ) );
             $user = Auth::user();
             $user->banner = $filename;
             $user->save();

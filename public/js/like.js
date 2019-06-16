@@ -12,7 +12,8 @@ $('.like').on('click',function(event){
         data:{isLike: isLike, postId: postId, _token: token}
     })
         .done(function(){
-            event.target.innerHTML = isLike ? event.target.innerHTML == 'Like' ? ' ':' ': event.target.innerHTML == ' '?'  ':' ';
+            event.target.innerHTML = isLike ? event.target.innerHTML == 'Like' ? ' You like':'Like': event.target.innerHTML == 'Dislike'?'You dont like':'Dislike';
+            event.target.innerHTML = isLike ? event.target.innerHTML == 'Like' ? ' You like':'Like': event.target.innerHTML == 'Dislike'?'You dont like':'Dislike';
             if(isLike){
                 event.target.nextElementSibling.innerHTML =' ';
             }else{
