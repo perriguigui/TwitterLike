@@ -34,7 +34,7 @@
 
         <div class="blog-post mx-auto mt-4 col d-inline">
 
-            <h1 style="color: white">Mes tweets :</h1>
+            <h1 style="color: #D62C10">Mes tweets :</h1>
             @foreach ($user->posts as $post)
             <div class=" card-style1 card p-4 py-4  mt-4 ">
                 <div class="post mx-3 post-css" data-postid="{{$post->id}}">
@@ -60,7 +60,15 @@
                         @endif
                             <p class="d-inline color_rouge ml-2">{{$post->retweetsFromPost->count()}}</p>
                         <i class=" fas fa-retweet ml-2"></i>
-                        <a href="{{ route('retweet', ['user_id' => Auth::user()->id,'post_id' => $post->id]) }}" class="color_rouge ">Retweet</a>
+                        <div class="dropdown">
+                            <a href="{{ route('retweet', ['user_id' => Auth::user()->id,'post_id' => $post->id]) }}" class="color_rouge ">Retweet</a>
+                                <div class="dropdown-content">
+                                    <p style="color: #E11531;">Retweet by :</p>
+                                    @foreach ($post->retweetsFromPost as $object)
+                                        <p class="retweet_name-style "> {{ $object->user->name}}</p>
+                                    @endforeach
+                                </div>
+                        </div>
                         @if(Auth::user()==$post->user)
                             <a href="#" class="edit color_rouge ml-4">Edit</a>
                             <a href="{{ route('post.delete', ['post_id' => $post->id]) }}" class="color_rouge">Delete</a>
@@ -75,7 +83,7 @@
         @if($user->retweets->count()>0)
             <div class="blog-post mx-auto mt-4 col d-inline">
 
-                <h1 style="color: white">Retweets:</h1>
+                <h1 style="color: #D62C10">Retweets:</h1>
                 @foreach ($user->retweets as $retweets)
                     <div class="card-style1 card p-4 py-4  mt-4 ">
                         <div class="post mx-3 post-css" data-postid="{{$retweets->post->id}}">
@@ -100,7 +108,15 @@
                                 @endif
                                     <p class="d-inline color_rouge ml-2">{{$retweets->where("post_id",$retweets->post->id)->count()}}</p>
                                     <i class=" fas fa-retweet ml-2"></i>
+                                <div class="dropdown">
                                     <a href="{{ route('retweet', ['user_id' => Auth::user()->id,'post_id' => $retweets->post->id]) }}" class="color_rouge ">Retweet</a>
+                                    <div class="dropdown-content">
+                                            <p style="color: #E11531;">Retweet by :</p>
+                                            @foreach ($post->retweetsFromPost as $object)
+                                                <p class="retweet_name-style "> {{ $object->user->name}}</p>
+                                            @endforeach
+                                        </div>
+                                </div>
                                 @if(Auth::user()==$retweets->post->user)
                                     <a href="#" class="edit color_rouge ml-4">Edit</a>
                                     <a href="{{ route('post.delete', ['post_id' => $retweets->post->id]) }}" class="color_rouge">Delete</a>

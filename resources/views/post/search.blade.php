@@ -44,14 +44,19 @@
                                 <p>faut se connecter pour liker</p>
                             @endif
                             <p class="d-inline color_rouge ml-2">{{$post->retweetsFromPost->count()}}</p>
-                            <a href="{{ route('retweet', ['user_id' => Auth::user()->id,'post_id' => $post->id]) }}" class="color_rouge">Retweet</a>
+                            <div class="dropdown">
+                                <a href="{{ route('retweet', ['user_id' => Auth::user()->id,'post_id' => $post->id]) }}" class="color_rouge">Retweet</a>
+                                <div class="dropdown-content">
+                                    <p style="color: #E11531;">Retweet by :</p>
+                                    @foreach ($post->retweetsFromPost as $object)
+                                        <p class="retweet_name-style "> {{ $object->user->name}}</p>
+                                    @endforeach
+                                </div>
+                            </div>
                             @if(Auth::user()==$post->user)
                                 <a href="#" class="edit color_rouge ml-4">Edit</a>
                                 <a href="{{ route('post.delete', ['post_id' => $post->id]) }}" class="color_rouge">Delete</a>
                             @endif
-                            @foreach ($post->retweetsFromPost as $object)
-                                <p class="d-inline retweet_name-style "> Retweet by {{ $object->user->name }}</p>
-                            @endforeach
                         </div>
                     </article>
                 </div>
