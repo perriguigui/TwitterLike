@@ -23,8 +23,6 @@
                 </form>
             </div>
                 <div class="blog-post mx-auto mt-4 col d-inline">
-
-                    <h1 style="color: #D62C10">Mes tweets :</h1>
                     @if(count($posts)>0)
                     @foreach ($posts as $post)
                         <div class=" card-style1 card p-4 py-4  mt-4 ">
@@ -89,7 +87,7 @@
                                 </form>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
                                 <button type="button" class="btn btn-light btnstyle-1" id="modal-save">Save changes</button>
                             </div>
                         </div><!-- /.modal-content -->
