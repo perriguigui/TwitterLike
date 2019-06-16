@@ -11,12 +11,17 @@
         </div>
         <ul id="users" >
             <h1 class="color_rouge  col-2 mb-4">Users</h1>
+            @if(count($users)>0)
             @foreach($users as $user)
                 <div class=" card card-style1 col-2 d-inline-block">
                  <li class="user-search-item"><a href="{{route('profile.show',$user->id)}}">{{$user->name}}</a></li>
                 </div>
             @endforeach
+            @else
+                <p class="d-inline color_rouge ml-2">Aucun utilisateurs trouvé!</p>
+            @endif
                 <h1 class="color_rouge col-2 mt-5 ">Post</h1>
+            @if(count($posts)>0)
             @foreach ($posts as $post)
                 <div class=" card-style1 card mx-auto col-7  ">
                     <div>
@@ -32,7 +37,7 @@
                         <p class="d-inline color_rouge">{{count($post->likes)}}</p>
                         <div class="interaction my-3 color_rouge d-inline">
                             <a href="" class="like fas fa-thumbs-down color_rouge ml-1">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==1 ? 'You dont like':'Dislike':'Dislike'}}</a>
-                            <a href="" class="like fas fa-thumbs-up color_rouge ml-3" >{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==0 ? 'You like':'Like':'Like'}}</a>
+                            <a href="" class="like  fas fa-thumbs-up color_rouge ml-3" >{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==0 ? 'You like':'Like':'Like'}}</a>
 
                             @else
                                 <p>faut se connecter pour liker</p>
@@ -50,6 +55,9 @@
                     </article>
                 </div>
             @endforeach
+            @else
+                <p class="d-inline color_rouge ml-2">Aucun posts trouvé!</p>
+            @endif
         </ul>
         </div>
     <script src="{{asset('/js/like.js')}}" type="text/javascript"></script>
