@@ -10,19 +10,16 @@
             </form>
         </div>
         <ul id="users" >
-<<<<<<< HEAD
-            <h1 class="color_rouge  col-2 mb-4"  >Users</h1>
-=======
+
             <h1 class="color_rouge  col-2 mb-4">Users</h1>
             @if(count($users)>0)
->>>>>>> 875c2f3fe9299894ceea1da275f27d9338d249d4
             @foreach($users as $user)
                 <div class=" card card-style1 col-2 d-inline-block">
                  <li class="user-search-item"><a href="{{route('profile.show',$user->id)}}">{{$user->name}}</a></li>
                 </div>
             @endforeach
             @else
-                <p class="d-inline color_rouge ml-2">Aucun utilisateurs trouvé!</p>
+                <p class="d-inline color_black ml-2">Aucun utilisateurs trouvé!</p>
             @endif
                 <h1 class="color_rouge col-2 mt-5 ">Post</h1>
             @if(count($posts)>0)
@@ -60,7 +57,7 @@
                 </div>
             @endforeach
             @else
-                <p class="d-inline color_rouge ml-2">Aucun posts trouvé!</p>
+                <p class="d-inline color_black ml-2">Aucun posts trouvé!</p>
             @endif
         </ul>
         </div>
