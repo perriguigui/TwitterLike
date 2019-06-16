@@ -47,16 +47,16 @@
                     <h6 class="offset-1 date-style">{{$post->created_at}}</h6>
 
                     <p>{{$post->body}}</p>
-                    <p class="d-inline color_rouge">{{count($post->likes)}}</p>
+                    <p class="d-inline color_rouge">{{$post->likes->where('like',2)->count()}}</p>
                     <div class="interaction my-3 color_rouge d-inline ">
                         @if (Auth::check())
-                            <a href="#" class="like fas fa-thumbs-up color_rouge ml-1">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==1 ? 'You like':'':''}}</a>
-                            <a href="#" class="like fas fa-thumbs-down color_rouge ml-3">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==0 ? 'You dont like':'':''}}</a>
+                            <a href="" class="like fas fa-thumbs-down color_rouge ml-1">{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==1 ? 'You dont like':'Dislike':'Dislike'}}</a>
+                            <a href="" class="like fas fa-thumbs-up color_rouge ml-3" >{{Auth::user()->likes()->where('post_id',$post->id)->first() ? Auth::user()->likes()->where('post_id',$post->id)->first()->like==0 ? 'You like':'Like':'Like'}}</a>
                         @else
                             <p>faut se connecter pour liker</p>
                         @endif
+                            <a href="{{ route('retweet', ['user_id' => Auth::user()->id,'post_id' => $post->id]) }}" class="color_rouge ml-2">Retweet</a>
                             @if(Auth::user()==$post->user)
-                                <a href="{{ route('retweet', ['user_id' => Auth::user()->id,'post_id' => $post->id]) }}" class="color_rouge ml-2">Retweet</a>
                                 <a href="#" class="edit color_rouge ml-4">Edit</a>
                                 <a href="{{ route('post.delete', ['post_id' => $post->id]) }}" class="color_rouge">Delete</a>
                             @endif
@@ -82,14 +82,15 @@
                         <h6 class="offset-1 date-style">{{$retweets->post->created_at}}</h6>
 
                         <p>{{$retweets->post->body}}</p>
-                        <p class="d-inline color_rouge">{{count($retweets->post->likes)}}</p>
+                        <p class="d-inline color_rouge">{{$retweets->post->likes->where('like',1)->count()}}</p>
                         <div class="interaction my-3 color_rouge d-inline">
                             @if (Auth::check())
-                                <a href="#" class="like fas fa-thumbs-up color_rouge ml-1">{{Auth::user()->likes()->where('post_id',$retweets->post->id)->first() ? Auth::user()->likes()->where('post_id',$retweets->post->id)->first()->like==1 ? 'You like':'':''}}</a>
-                                <a href="#" class="like fas fa-thumbs-down color_rouge ml-3">{{Auth::user()->likes()->where('post_id',$retweets->post->id)->first() ? Auth::user()->likes()->where('post_id',$retweets->post->id)->first()->like==0 ? 'You dont like':'':''}}</a>
+                                <a href="" class="like fas fa-thumbs-down color_rouge ml-1">{{Auth::user()->likes()->where('post_id',$retweets->post->id)->first() ? Auth::user()->likes()->where('post_id',$retweets->post->id)->first()->like==1 ? 'You dont like':'Dislike':'Dislike'}}</a>
+                                <a href="" class="like fas fa-thumbs-up color_rouge ml-3" >{{Auth::user()->likes()->where('post_id',$retweets->post->id)->first() ? Auth::user()->likes()->where('post_id',$retweets->post->id)->first()->like==0 ? 'You like':'Like':'Like'}}</a>
                             @else
                                 <p>faut se connecter pour liker</p>
                             @endif
+                                <a href="{{ route('retweet', ['user_id' => Auth::user()->id,'post_id' => $retweets->post->id]) }}" class="color_rouge ml-2">Retweet</a>
                             @if(Auth::user()==$retweets->post->user)
                                 <a href="#" class="edit color_rouge ml-4">Edit</a>
                                 <a href="{{ route('post.delete', ['post_id' => $retweets->post->id]) }}" class="color_rouge">Delete</a>

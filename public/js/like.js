@@ -12,12 +12,12 @@ $('.like').on('click',function(event){
         data:{isLike: isLike, postId: postId, _token: token}
     })
         .done(function(){
-            event.target.innerHTML = isLike ? event.target.innerHTML == 'Like' ? ' You like':'Like': event.target.innerHTML == 'Dislike'?'You dont like':'Dislike';
-            event.target.innerHTML = isLike ? event.target.innerHTML == 'Like' ? ' You like':'Like': event.target.innerHTML == 'Dislike'?'You dont like':'Dislike';
+            event.target.innerHTML = isLike ?event.target.innerHTML == 'Dislike'?'you dont like':'Dislike': event.target.innerHTML == 'Like' ? 'you like':'Like';
+
             if(isLike){
-                event.target.nextElementSibling.innerHTML =' ';
+                event.target.nextElementSibling.innerHTML ='Like';
             }else{
-                event.target.previousElementSibling.innerHTML =' ';
+                event.target.previousElementSibling.innerHTML ='Dislike';
             }
         });
 });
