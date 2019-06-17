@@ -47,7 +47,7 @@
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) and (min-width: 585px){
     img.avatar_style {
         position: absolute;
         top: 3em;
@@ -67,6 +67,36 @@
     }
 
     a.text-banner-style{
+        display: block;
+    }
+}
+
+
+@media only screen and (max-width: 585px)
+{
+    img.avatar_style {
+        position: absolute;
+        top: 3vw;
+        left:2em;
+        width:12vw;
+    }
+    h2.profil-name{
+        position: absolute;
+        left:23vw;
+        top:2vw;
+        font-size: 5vw;
+    }
+    div.editfollow-style{
+        position: absolute;
+        left:45vw;
+        top:3vw;
+        font-size: 2vw;
+    }
+
+    a.text-banner-style{
+        display: block;
+    }
+    div.user_display{
         display: block;
     }
 }
@@ -125,3 +155,6 @@
 }
 
 
+.user_display{
+    display: inline;
+}

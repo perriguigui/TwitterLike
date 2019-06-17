@@ -4,7 +4,7 @@
     <p class="big-name " id="big_nameProfil">Profil</p>
     <div class="container">
         <div class="row">
-            <div class="col-10 col-offset-1 mx-auto">
+            <div class="col-10 -offset-1 mx-auto">
 
                     <img src="/uploads/banners/{{ $user->banner }}" class="banner-style">
                     <img src="/uploads/avatars/{{ $user->avatar }}" class="avatar_style ">
@@ -31,7 +31,7 @@
          </div>
     </div>
     <div class="row">
-        <div class="blog-post mx-auto mt-4 col d-inline">
+        <div class="blog-post mx-auto mt-4 col-sm-12 col-md-6 user_display">
 
             <h1 style="color: #D62C10">Mes tweets :</h1>
             @foreach ($user->posts as $post)
@@ -78,7 +78,7 @@
             @endforeach
         </div>
         @if($user->retweets->count()>0)
-            <div class="blog-post mx-auto mt-4 col d-inline">
+            <div class="blog-post mx-auto mt-4 col user_display">
 
                 <h1 style="color: #D62C10">Retweets:</h1>
                 @foreach ($user->retweets as $retweets)
@@ -140,7 +140,7 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-light btnstyle-1" id="modal-save">Save changes</button>
                     </div>
                 </div><!-- /.modal-content -->

@@ -5,14 +5,14 @@
     <p class="big-name " >Actualité</p>
 
     <div class="row justify-content-center  mt-5 ">
-        <div class="col-md-8 col-10">
-            <div class="search-block col-sm-8 col-10 col-lg-6 mx-auto mx-lg-auto card mb-3  ">
+        <div class="col-md-8 col-10 col-sm-12">
+            <div class="search-block col-sm-8 col-12 col-10 col-lg-6 mx-auto mx-lg-auto card mb-3  ">
                 <form class="search-form  mb-3 py-3"  action="{{route('search')}}" method="get">
                     <input type="text" name="search" class="ml-4 mr-3 mt-4   searchstyle-1 " placeholder=" Search Username " value="{{ $search }}">
                     <button type="submit" class="btn-css"><i class="fas fa-search search-icon "></i></button>
                 </form>
             </div>
-            <div class=" mx-auto card card-style1 border border-light">
+            <div class=" mx-auto card card-style1 border border-light ">
                 <div class="cardHeaderStyle mx-auto px-5 mt-2 mb-5 border-bottom border-danger rounded text-center"><h3>What do you have to say?</h3></div>
                 <form action="{{ route('post.create') }}" method="post">
                     <div class="form-group  mx-4">
@@ -22,12 +22,10 @@
                     <input type="hidden" value="{{ Session::token() }}" name="_token">
                 </form>
             </div>
-                <div class="blog-post mx-auto mt-4 col d-inline">
-
-                    <h1 style="color: #D62C10">Mes tweets :</h1>
+                <div class="blog-post mt-4 col d-inline">
                     @if(count($posts)>0)
                     @foreach ($posts as $post)
-                        <div class=" card-style1 card p-4 py-4  mt-4 ">
+                        <div class=" card-style1 card p-4 py-4  mt-4 mx-auto col ">
                             <div class="post mx-3 post-css" data-postid="{{$post->id}}">
                                 <a href="{{route("profile.show",$post->user->id)}}">
                                     <img src="/uploads/avatars/{{ $post->user->avatar }}" width="50px" height="50px" class="rounded-circle photo-style1 ">
@@ -89,7 +87,7 @@
                                 </form>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
                                 <button type="button" class="btn btn-light btnstyle-1" id="modal-save">Save changes</button>
                             </div>
                         </div><!-- /.modal-content -->
