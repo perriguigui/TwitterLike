@@ -6,9 +6,6 @@ Project PHP Laravel
 
     - Antonin Perrin
 		
-Bonus Réalisé:
-	
-    - Css
 	
 Lien du site en ligne:
 	
@@ -57,9 +54,6 @@ Bonus Réalisé:
     -Css
 
 
-Lien du Git:
-
-    git@github.com:perriguigui/TwitterLike.git
 
 Etapes pour ouvrir notre projet:
 
