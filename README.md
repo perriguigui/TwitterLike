@@ -1,13 +1,13 @@
 Project PHP Laravel
 
- - participants:
+ - Participants:
 
-    -Pierre Lippens
+    - Pierre Lippens
 
-    -Antonin Perrin
+    - Antonin Perrin
 		
 Bonus Réalisé:
-	-Css
+	- Css
 	
 Lien du site en ligne:
 	
