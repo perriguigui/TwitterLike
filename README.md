@@ -8,17 +8,6 @@ Project PHP Laravel
 		
 Bonus Réalisé:
 	-Css
-
-Lien du Git:
-	git@github.com:perriguigui/TwitterLike.git
-
-Etapes pour ouvrir notre projet:
-	1-	Aller sur le projet avec la ligne de command : cd projectName
-	2-	Installer les fichier de composer non mis sur le git :  composer install
-	3-	Créer une base de données sur phpMyAdmin
-	4-	Créer un fichier se nommant .env avec les élément contenu dans .env.example modifié pour qu'ils soient adaptés à notre base de données
-	5-	générer une clé : php artisan key:generate
-	6-	Migrer les bases de données contenu dans le code, dans la base créer sur phpMyAdmin : php artisan migrate
 	
 Lien du site en ligne:
 	
