@@ -8,7 +8,7 @@ Project PHP Laravel
 
 
 - Les fonctionnalité réalisées:
-<<<<<<< HEAD
+
 	Système de gestion utilisateur : on peut:
 		- Créer un compte
 		- Se connecter avec ses identifiants
@@ -46,7 +46,7 @@ Etapes pour ouvrir notre projet:
 	
 Lien du site en ligne:
 	
-=======
+
     Système de gestion utilisateur :
         on peut:
         
@@ -112,4 +112,4 @@ Etapes pour ouvrir notre projet:
 
 Lien du site en ligne:
     hatweets.000webhostapp.com
->>>>>>> 977517b26c6aaf1a37db7f4216b23cac6e484e9e
+
